@@ -1,0 +1,185 @@
+Dynamic routing
+------------------
+types:
+	- RIP (Routing Information Protocol)
+	- IGRP (Interior Gateway Routing Protocol)
+	- EIGRP (Enhanced Interior Gateway Routing Protocol)
+	- OSPF (Open Shortest Path First)
+	- EGP (Exterior Gateway protocol)
+	- BGP (Border Gateway Protocol)
+	- IS-IS (Immediate system-to-Immediate system)
+
+Layerwise routing protocol:
+	- Data link layer 
+		- ARP - map IP address to MAC address
+	- Network layer (layer 3)
+		- RIP
+		- OSPF
+		- BGP
+		- IS-IS
+	- Transport layer (layer 4)
+		- Load balancing
+		- Traffic shapping
+		- TCP
+		- UDP
+
+1. Distance Vector Routing Protocol
+		- Distance = hop count
+		- Vector   = direction
+	- this protocol chooses shortest route with the least number of HOPS to reach from A to B.
+	
+RIP
+	- Routing Information Protocol
+	- has 2 versions
+		V1
+			- it does not VLSM (Variable Length Subnet Mask)
+			- it supports classful subnets
+				Class A -> /8
+				Class B -> /16
+				Class C -> /24
+			- the destination address: 255.255.255.255
+		V2
+			- allows the VLSM
+			- the destination address: 224.0.0.9 (multi-cast address)
+			
+	- it supports a maximum of 15 hop counts
+	- Uses port 520/UDP
+	- its periodic time is 30Sec. 
+	
+#######################################################################
+
+IGRP 
+	- Interior Gateway Routing Protocol
+	- its cisco's proprietry product 
+	- it is also a distance vector routing protocol
+	- it is used for measuring 
+		- bandwidth
+		- delays
+		- load
+		- MTU - 1500
+		- reliability
+	- it transmits the info after every 90 secs
+	- max. allowed hops: 255
+	- simple
+	- slow for the giant/large networks
+
+#######################################################################
+
+EIGRP 
+	- Enhanced Interior Gateway Routing Protocol
+	- open source after 2014
+	- aka hybrid routing protocol
+	- EIGRP = RIP (v2) + OSPF
+	- EIGRP creates 3 tables:
+		1. Neighbour table
+		2. Topology Table
+		3. Routing Table
+
+
+ASN:
+	- Autonomous System Number
+	- ranges from: 1-65535
+		- 1-64511 		=> Public ASN
+		- 64512-65535	=> Private ASN
+		
+#######################################################################
+OSPF
+	- Open shortest path first
+	- it sends a hello packet to the neighbour.
+		R1 -> hello -> R2
+		R2 -> hello -> R1
+	- if any router does not respond for "40 Secs", then the other router will be considered out of th network.
+	- there are no limits for the number of routers in OSPF
+		RIP 	= 16
+		EIGRP	= 255
+		OSPF	= Unlimited
+	- used for giant/large networks
+	- it has fast convergence
+		convergence: 1 path goes down, how to will it take to connect to another path.
+	- it uses the concept of "Area Zero" aka backbone.
+	- in OSPF, LSA (linked-state advertizement) containing:
+		- Subnet
+		- Router
+		- other network infor
+	- all these 3 details are save within LSDB (link-state database)
+	- there are 3 steps:
+		1. Becoming neighbours
+			- 2 routers running OSPF on same network, agrees to form a neighbour relationship.
+		2. Exchanging database (LSDB) information
+			- routers swap thier LSDB with each other.
+		3. Choose the best router.
+			- best route is added to the routing table based on LSDB information.
+			
+			
+writing reverse mask for OSPF:
+--------------------------------
+class A			10.0.0.0
+default mask	255.0.0.0
+reverse mask	0.255.255.255
+		
+class B			172.16.0.0
+default mask	255.255.0.0
+reverse mask	0.0.255.255
+
+class C			192.168.1.0
+default mask	255.255.255.0
+reverse mask	0.0.0.255
+
+
+Cisco IOS:
+-----------
+- IOS = Internetwork Operating system.
+- used on vast majority of cisco devices
+- its a CLI = Command line Interface OS
+- it is a "context-sensitive" OS
+	context-sensitive => with different modes
+		>	usermode 		-> all show/display commands
+		#	privilge mode	-> root access
+		(config) #			-> global config
+- before IOS version 15, IOS uses "monolithic architecture"
+- but after version 15.0, it started using "Microservice architecture".
+- almost all cisco devices have cisco IOS, except:
+	- firewall
+	- intrusion prevention system (IPS)
+- connecting to the cisco devices:
+	1. cable (console cable)
+	2. softwares (hyper-terminal, putty, teraterm, Secure RT [paid])
+	3. remote connection (telnet, SSH)
+
+- Cisco SmartNet:
+	- subscription for production
+	- cisco itself will give you a support.
+	- its not for testing envs. 
+	
+- Router booting process:
+	1.	Router is powered on.
+	2.	It performs POST (power on self-test).
+	a.	It checks all the hardware, CPU, memory, etc. 
+	3.	Bootstrap program is loaded & executed (whenever IOS is found, load it)
+	4.	Bootstrap reads configuration register values & loads the IOS.
+	5.	If bootstrap fails, it will drop boot sequence & then move it to the ROMMON troubleshooting program. 
+	6.	If the IOS is loaded, it will try to load the config file.
+	7.	Once the configuration is loaded then CLI interface will be present in front of you.
+
+Firewalls:
+----------------
+- a network security devices	
+	1. monitor
+	2. control inbound/outbond network traffic.
+	
+- types of firewall:
+	1. packet filter firewall
+	2. stateful inspection firewall (dynamic packet filtering)
+	3. proxy firewall
+	4. Application level firewall
+	5. Next-Gen Firewalls (NGFW)
+	
+Security methods
+	- firewall
+	- IDS
+	- IPS
+	- VPNs
+	- Access Control
+	- patching (upgrading)
+	- backup & disaster recovery
+	- penetration testing -> white, grey hat hackers

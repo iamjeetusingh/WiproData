@@ -1,0 +1,233 @@
+Windows Server 2016:
+--------------------
+- job of a server is to "SERVE" to the client.
+- serving:
+	- IP address (DHCP)
+	- name resolution (IP to name & name to IP --> DNS)
+	
+Windows Server 2016 Editions:
+-----------------------------
+	1. Essentials
+		- for small companies
+		- either 1 physical machine or 1 virtual machine
+		- license: CPU based
+		- a max of 2 CPUs.
+		- a max of 64GB RAM.
+		- 25 users or 50 devices can be attached to this svr.
+	2. Standard
+		- mid level companies
+		- 2 VMs or 2 Hyper-V containers
+		- license: Core
+		- a max of 512 cores
+		- a max of 24TB RAM.
+	3. Datacenter
+		- big companies, manage higher load.
+		- unlimited VMs.
+		- a max of 512 cores
+		- a max of 24TB RAM.
+		
+Minimum requirements for win server 2016:
+------------------------------------------
+	1. CPU architecture: 64bit (x64)
+	2. RAM: 512 MB (DC - 2GB)
+	3. HDD: 32GB
+	4. 1 NIC card (gigabit)
+
+draw.io --> drawing the diagrams
+
+Terms:
+--------
+Domain
+	- a logical boundary of any organization.
+	- it contains: OUs, policies, trust-relationships
+
+Organizational Unit (OU)
+	- its just like a department
+	- it holds users, computers & groups.
+	- users, computers & groups are indivi. called as objects.
+	
+Forest
+	- collection of domains with active directory.
+
+Domain Controller (DC)
+	- is a server that responds to the authentication of users, enforcing the policies.
+	
+Sites	
+	- a physical geographical location (BLR, Delhi, Chennai..)
+	
+Active Directory
+	- is a directory service (by Microsoft) that acts as a directory (database) that stores information in it.
+	- LDAP - Light-weight Directory Access Protocol
+	
+Active Directory Domain Services (ADDS)
+	- ADDS is a service that provides authentication & authorization services with the domain.
+	- its a ROLE.
+	
+Role
+	- a role is the functionality that a server must perform.
+	- 25 roles
+		- ex: DHCP, DNS, ADDS, ADFS, ADRMS, ADLDS.. 
+	
+Features
+	- are the supporting functionalities of the role.
+	- 60 features
+	
+Components of ADDS:
+--------------------
+	1. Physical component
+		- domain controller
+			- contains the copies of the ADDS database (NTDS.DIT). 
+		- data store
+			- the file on domain controller that stores the ADDS information.
+		- global catalog server
+			- the GC server increases the search speed of the objects within the domain.
+		- RODC
+			- Read only Domain controller
+			- basically this DC is for branch offices where less technical people can "read only" the AD's information
+	
+	2. Logical component
+		- Partition
+			- a section of ADDS database. 
+		- Schema
+			- the blueprint of the database.
+		- Domain
+		- Domain tree
+		- Forest
+		- Site
+		- Organizational Unit (OU)
+		
+		
+Step to convert a regular server into a domain controller.
+----------------------------------------------------------
+Post installation configuration
+###############################
+- configure the server name 
+	- change the name
+	- restart
+- configure the IP address (static) 
+	- it is recommended to have a static IP address for domain controller.
+		IP: 		192.168.10.10
+		subnet:		255.255.255.0
+		gateway:	192.168.10.1
+- configure the local settings
+	- firewall
+	- IE..
+	- date & time
+
+##############################
+##############################
+   take snapshot of the DC
+##############################
+##############################
+
+
+to get ADDS on your server:
+##############################
+- install the ADDS role using 
+	1. server manager dashboard page (use this)
+	2. powershell
+1. installed a server
+2. installed ADDS role
+3. promote this ADDS installed server to DC
+
+
+Note: when you promote a server to domain controller, DNS role automatically get installed. 
+
+domain name (forest name): jeetusingh.in
+login as domain admin	 : domainname\username
+login as domain admin	 : jeetusingh\administrator
+
+Ques: How will you identity that the server you are working on is an ADDS server?
+Ans:  1. ADDS & DNS enteries on the dashboard page.
+	  2. active directory related enteries under "TOOLS" tab.
+	  
+ADDS administration tools:
+---------------------------
+Graphical User Interface (GUI)
+	a. Active Directory Administration Snap-ins
+	b. Active Directory Administration center
+Command Line Interface (CLI)
+	a. Active Directory Modules for Windows PowerSHell
+	b. Directory Service Commands
+	
+	
+	
+- Open Active Directory Users & Computers
+- create an OU
+- create few users and add them to the OU.
+
+
+Windows Servers:
+----------------
+	1. Windows server GUI
+	2. Server Core OS (CLI) --> sconfig.cmd
+	3. Nano server (CLI--> PowerSHell)
+	
+Task:
+-------
+	- turn off client01, not the DC.
+	- install windows 10
+		- IP			: 192.168.10.12
+		- subnet		: 255.255.255.0
+		- default GW	: 192.168.10.10
+		- DNS			: 192.168.10.10
+	- ping to the DC.
+	- domain join the windows 10 to your domain controller machine.
+		
+		
+Windows Native tools:
+-----------------------
+	1. Active Directory Administrative Center
+		- works for the admin related tasks
+			- creating a user
+			- modifying a user
+			- creating a group
+			- editing a group/OU (disabling accendental deletion)
+	2. Active Directory Domain & Trusts
+		- help in trusting the domains
+	3. Active Directory Sites & services	
+		- for creating & managing sites
+	4. Active Directory users & computers
+		- create, modify, delete users
+		- create, modify, delete computers
+	5. Active Directory modules for powershell
+		- here, we run all active directory related powershell cmdlets.
+		- create, modify, delete --> users, computers, groups, OUs.....
+	
+PowerSHell ISE
+	- ISE = Integrated Scripting Environment
+	- it is used for writing the scripts.
+	- it has INTELLI-SENSE
+	
+DNS:
+-------
+- domain name system
+- DNS resolves name to IP & vice-versa.
+- DNS is a role.
+- DNS creates several records
+	- A record 		- stores the IPv4 address
+	- AAAA record 	- stores the IPv6 address
+	- PTR record 	- POINTER record points back to the origin
+	- CNAME record 	- canonical name (alias/alternative name)
+	- MX record		- Mail Exchange, used where email servers are configured
+	- SOA record	- Start of authority
+	- txt record	- text data record.
+	- NS record		- nameserver (FQDN - Fully Qualified Domain Name)
+					- web01.blr.wipro.com
+
+troubleshooting commands & tools:
+----------------------------------
+- nslookup (dig)
+	- windows & linux based command
+	- for getting the DNS server details
+- DNSCmd 
+	- a CLI tool
+	- to manage the DNS server role
+- Dnslint
+	- for common diagnostics issues.
+	- generates HTML reports.
+- ipconfig
+	- ipconfig /displaydns
+	- ipconfig /flushdns
+	- ipconfig /registerdns
+- DNS server monitoring - GUI

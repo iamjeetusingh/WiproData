@@ -1,0 +1,171 @@
+Hypervisior tool 
+	- a tool to achieve virtualization
+	- 2 types
+		1. Type-1 HV
+			- bare matel HV
+			- installed on top on physical machine & do not require an OS.
+			- ex:
+				- Microsoft Hyper-V
+				- VMWare ESXi
+				- Citrix Xenservers
+		2. Type-2 HV
+			- guest-based / OS-based HV
+			- installed on top of your current operating system.
+			- ex:
+				- Microsoft Hyper-V
+			- Oracle Virtual Box
+				- VMWare workstation
+				- Linux KVM (Kernel-based Virtual Machine)
+				
+IP addresses
+	1. Private IP address
+	2. Public IP address
+		- Dynamic Public IP address
+			- IP will change 
+		- Static Public IP address
+			- IP will NOT change 
+			
+Assign/Give the IP address:
+--------------------------
+1. DHCP (Dynamic Host Config Protocol)
+2. Manually assigning
+	ncpa.cpl --> select nic and add manually
+3. APIPA (Automatic Private IP Addressing)
+	- range: 169.254.0.1 - 169.254.255.254 (169.254.X.X)
+	
+Classes in IP address (IPv4)
+----------------------------
+	11111111.1111111.00000000.11110000
+			  192.168.0.10
+			  
+5 classes (0-255 = 256)
+	Class A -> 0-127	-> used for huge networks of hosts
+	Class B -> 128-191	-> used for medium size networks
+	Class C -> 192-223	-> used for local area network (LAN)
+	Class D -> 224-239	-> Reserved
+	Class E -> 240-255	-> Reserved
+	
+0.0.0.0 		-> Any network
+10.0.0.0		-> used for assigning Class A private IP address
+127.0.0.1		-> Loop back IP address.
+172.16.0.0		-> used for assigning Class B private IP address
+192.168.0.0		-> used for assigning Class C private IP address
+
+
+
+OSI Model
+-----------
+1. Physical Layer		=> Transmits raw data over the cable.
+2. Data Link Layer		=> Manages communication between devices on the same network segment
+3. Network Layer		=> Routes the data packets across diff networks.
+4. Transport Layer		=> Provides reliable data delivery and manages end-to-end communication
+5. Session Layer		=> Establishes, maintain & terminates session between application
+6. Presentation Layer	=> Translates data into a format that application can understand.
+7. Application Layer	=> Provides interface for user application to access n/w services.
+
+
+TCP/IP Model
+-------------
+1. Application layer
+2. Transport layer
+3. Network layer
+4. Data link layer
+5. Physical layer
+
+==========================================================================
+Switching
+Routing
+Cisco IOS
+GNS3 
+Cisco Packet Tracer
+==========================================================================
+Switching
+---------
+- Switch 	= a device to connect 2 or more computers
+- Switching = the transfer of data pkt through a network switch
+- cheap till very expensive range
+- types of switches
+	- unmanaged switch
+		- which does not provide any advance features like vlans.
+		- these are similar to HUBs.
+		- thus, not an industry standard.
+	- managed switch
+		- these are the industry standard.
+		- they provide additional features.
+		- Cisco, Juniper, HP
+- it works at layer 2 (data link layer)
+- it works on MAC addresses
+- it maintains the MAC address table.
+
+Cisco heirarchical design model
+--------------------------------
+1. Access layer switch
+	- your computers are directly connected here.
+	- these are the cheapest switches
+	- Range: 1900-2900
+2. Distribution layer switch
+	- used by ISPs
+	- these switches sits on the top of access layer switch
+	- these are costly than the ALS
+	- Range: 3000-5000
+3. Core layer switch
+	- these are responsible for managing huge networks
+	- Very expensive/costly
+	- Range: 7000, 8000, 10000, 12000..
+	
+Types of switches:
+-------------------
+Virtual switch 		- inside the VM env.
+Routing  switch		- for connecting LANs.
+Unmanaged switch	- small/home networks.
+Managed switch		- industries/big networks.
+LAN switch			- these avoid the overlapping of data packets
+PoE switch			- Power over Ethernet, Gigabit ethernet
+Smart switch		- partial managed switch, has additional control over data transmission
+
+
+NOTE: all the managed switches will have by-default 1 VLAN (VLAN-1) present.
+
+
+Layer 2 swtiches:
+-------------------
+- it works on Layer 2 (data link layer)
+- it deals with MAC addresses
+- it uses MAC to determine where to send the data.
+- are traditional and common switches
+
+Layer 3 swtiches (network):
+-------------------
+- aka multi-layer switches
+- bcoz these work on layer 3 & layer 2.
+- this layer deals with the IP address of the machine.
+- since it is working on layer 3, it deals with the routing.
+- to allow communication between 2 VLANs, we can use layer 3 switch.
+- it uses inter-vlan routing to communicate.
+- Layer 3 switch has SVI (Switch Virtual Interface) to connect to VLANs.
+
+
+########################################################################
+Remoting
+----------
+Windows	
+ - GUI -> RDP (3389)
+ - CLI -> PowerShell remoting (5985/5986)
+
+Linux
+ - GUI -> TigerVNC (59XX)
+ - CLI -> Telnet (23), SSH (22)
+
+Web browser based remoting - port 80(HTTP) / 443 (HTTPS)
+########################################################################
+
+Cross-Over cable - similar devices
+- switch-to-switch
+- Router-to-router
+- Route-to-PC
+- PC-to-PC
+
+Straight-through cables
+- switch-to-router
+- switch-to-PC
+- switch-to-server

@@ -1,0 +1,11 @@
+firstname,lastname,username,password,OU
+Aarav,Patel,Aarav.Patel,pass@word1,"OU=WiproDC, DC=jeetusingh, DC=in"
+Ishika,Sharma,Ishika.Sharma,pass@word1,"OU=WiproDC, DC=jeetusingh, DC=in"
+Ved,Singh,Ved.Singh,pass@word1,"OU=WiproDC, DC=jeetusingh, DC=in"
+Saanvi,Reddy,Saanvi.Reddy,pass@word1,"OU=WiproDC, DC=jeetusingh, DC=in"
+Aaradhya,Desai,Aaradhya.Desai,pass@word1,"OU=WiproDC, DC=jeetusingh, DC=in"
+Vihaan,Choudhary,Vihaan.Choudhary,pass@word1,"OU=WiproDC, DC=jeetusingh, DC=in"
+Ananya,Yadav,Ananya.Yadav,pass@word1,"OU=WiproDC, DC=jeetusingh, DC=in"
+Advik,Gupta,Advik.Gupta,pass@word1,"OU=WiproDC, DC=jeetusingh, DC=in"
+Siya,Kumar,Siya.Kumar,pass@word1,"OU=WiproDC, DC=jeetusingh, DC=in"
+Arjun,Iyer,Arjun.Iyer,pass@word1,"OU=WiproDC, DC=jeetusingh, DC=in"

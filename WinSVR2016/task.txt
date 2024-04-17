@@ -1,0 +1,13 @@
+task
+-----
+- create another windows server CLI operating system.
+- add the following to the server (use sconfig.cmd)
+	- computer name	: wiprocli01
+	- ip address	: 192.168.10.11
+	- subnet mask	: 255.255.255.0
+	- default GW	: 192.168.10.1
+	- DNS		: 192.168.10.10
+	- firewall	: OFF
+	- Ping to	: DC (wiprodc01)
+	- RAM		: 512MB / 1024MB
+	- HDD		: 10GB

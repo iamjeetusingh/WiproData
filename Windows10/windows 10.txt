@@ -1,0 +1,227 @@
+Windows OS:
+---------------
+Server 
+	- Windows Server 2003
+	- Windows Server 2008 
+	- Windows Server 2008R2	(2k8R2)	// R2 = Release 2
+	- Windows Server 2012 	(2k12)
+	- Windows Server 2012R2 (2k12R2)
+	- Windows Server 2016	(2k16)
+	- Windows Server 2019	(2k19)
+	- Windows Server 2022	(2k22)
+	
+	CLI version of Windows SVR --> "Server Core OS"
+		Server Core OS uses "sconfig.cmd" to manage the OS.
+	
+	in Windows Server 2016, MS release NANO server
+
+
+Client
+	- a client OS will ask for the services from the server and allow user to work with them
+		ex: DHCP service
+	- Editions
+		- Windows XP
+		- Windows 7
+		- Windows Vista
+		- Windows 8
+		- Windows 8.1
+		- Windows 10
+			- Home
+			- Pro
+			- Enterprise
+			- LTSB
+			- Education
+			- Mobile
+			- IoT
+		- Windows 11
+		
+Windows Booting process:
+------------------------
+Ways to boot the WinOS
+	1. Cold boot
+		- whan a computer starts for the 1st time, after power on button is pressed.
+	2. Hard/Warm boot
+		- computer restarts while powered on during the hard boot.
+		- this is useful while installing or uninstalling the software or updating the machine.
+		
+Booting process
+---------------
+
+1. BIOS/EFI
+	- BIOS = Basic Input Output System
+		- perform a test POST test
+			Power On Self Test = checking of hardware devices
+	- EFI = Extensible Firmware Interface
+		- UEFI = Unified Extensible Firmware Interface
+			- its a software between OS & platform firmware (hardware)
+
+2. MBR
+	- Master Boot Record
+	- it contains the address of operating system
+	- the size of MBR is "512 bytes"
+	
+3. Volume Boot Sector
+	- its a boot sector (by IBM), that contains necessary code to start the boot process.
+	
+4. bootmgr.exe
+	- it accesses the boot configuration data stored & uses the information to load the operating system and calls "winload.exe" or "winresume.exe"
+		- winload.exe
+			- this loads the necessary device drivers & the core part of the OS i.e, kernel (ntoskrnl.exe)
+		- winresume.exe
+			- its an OS file that resumes from hibernate boot mode.
+			
+5. ntoskrnl.exe
+	- the kernel file getting called by bootmgr.exe
+	
+6. HAL.DLL
+	- Hardware Abstraction Layer. Dynamic Link Library
+	- it is a crucial component od windows OS as it acts as a bridge between hardware & software to communicate efficiently.
+	
+7. SMSS.exe
+	- Session Manager Sub-System
+	- its the 1st usermode process started by kernel.
+	- once started, it creates additional paging files, env variables located at registry.
+	- this manager is responsible for starting the kernel and user mode of Win32 system.
+	- including win32k.sys, winsrv.dll & csrss.exe (user mode)
+	- it is also responsible for doing any operations that are requested to be done at the start of the session. Like "autochk" & "convert".
+	- this manager also started the registry keys.
+	- after windows vista, SMSS creates a temporary instance of itself that launches the windows startup application (wininit.exe) and a second client/server runtime subsystem (csrss.exe) for dedicated session to start system process
+	- from here, the windows startup application starts the service control manager (services.exe)
+	
+8. CSRSS.exe
+	- Client/Server Runtime Sub-System
+	- primarily, it will load the process & thread mgmt, console windows handling, side by side assembly & shutdown process.
+	- this is a very CRUICIAL process, as killing one process can lead to crash of the OS giving the BSOD (Blue Screen of Death). 
+		kill -> svchost
+		
+6 steps of booting process:
+-----------------------------
+	1. BIOS & setup program
+	2. POST test
+	3. the OS loads
+	4. System configuration
+	5. System utilities loads
+	6. user authentication
+	
+	
+Hypervisior tool:
+- is the software that helps you in achieving the virtualization.
+- hypervisors are of 2 types:
+	1. Type 1 HV
+		- bare matel HV
+		- these are directly installed on top of the hardware, with no OS on it.
+		- ex:	
+			- Microsoft Hyper V
+			- VMWare ESXi
+			- Citrix Xenservers
+	2. Type 2 HV
+		- guest-based / OS-based HV
+		- these requires an operating system to work
+		- ex:
+			- Microsoft Hyper-V
+			- Oracle Virtual Box
+			- Linux KVM
+			- VMWare Workstation
+			
+			
+Installing windows 10 OS:
+-------------------------
+- pre-requisites
+	1. VMWare workstation 17
+		Link: https://www.vmware.com/go/getworkstation-win
+	2. Windows 10 ISO file 
+		Link: https://www.microsoft.com/en-in/software-download/windows10
+	3. Enable either of them from BIOS setup.
+		a. Intel-VT						//OR
+		b. Virtualization technology
+	4. Minimum requirements for installing Win10:
+		a. Processors: 1GHz
+		b. RAM: 1GB (32bit), 2GB (64bit)
+		c. HDD: 16GB for 32bit, 20GB for 64bit 
+		
+		
+Create only the configuration of the VM: upto the disk space (unlimited)
+how many VMs can be started/executed at a time: limited (upto RAM)
+
+
+Hypervisiors
+------------------
+Type 1 hypervisiors
+	- used in production env
+	- Ex:
+		- Microsoft Hyper-V  -> download manually from MS site.
+		- VMWare ESXi
+		- Citrix Xen servers
+		
+Type 2 hypervisiors
+	- used in home laptops/desktops, small/mid-level org.
+	- Ex:
+		- Microsoft Hyper-V
+			- is a built-in package with your operating system.
+				- Win 8, 8.1, 10, 11
+			- free to use, if you enable it.
+		- VMWare Workstation
+			- Windows (VMWare Workstation) / MacOS (VMWare Fusion)
+			- it requires license
+			- its not free.
+			- but "VMWare player" is free.
+		- Linux KVM
+			- KVM = kernel-based virtual machine
+			- only for Linux based OS.
+		- Oracle Virtual Box
+			- freeware tool
+			- no license required.
+			
+			
+RDP
+	- Remote Desktop Protocol
+	- works on 3389
+	- it connects 2 windows machines that are remotely available
+	- requires
+		1. Pulic IP address
+		2. port 3389
+		3. username
+		4. password
+	
+Virtual Switches in Hyper-V Manager:
+------------------------------------
+3 types of switches
+	1. Private network switch
+		- allows the communication between virtual machines within hyper-v host.
+	2. Internal network switch
+		- allows the communication between VMs and Hyper-V host.
+	3. External network switch
+		- allows the communication between hyper-v manager & outside network.
+		
+		
+Topics:
+#####################################################################################
+- hyper-v manager installation.
+- creation of private, internal & external switches.
+- downloading of win10 ISO using media creation tool.
+- downloading of centos 7 ISO. (URL: http://isoredirect.centos.org/centos/7/isos/x86_64/)
+- edge browser.
+#####################################################################################
+
+
+PowerShell -> to create users in bulk. --> windows server
+
+creation of group
+creation of users
+adding the users to the group (remote desktop connection group)
+login in to the RDP connection.
+
+IP address:
+--------------
+by default, when an OS is installed.
+	- the IP address allocated is dynamic IP.
+to open IP console --> "ncpa.cpl"
+
+
+in Windows Firewall, there are 3 types networks
+	1. Private network
+		- within the windows OS.
+	2. Guest/Public network
+		- from win10 to internet & vice versa.
+	3. Domain network
+		- within a domain.

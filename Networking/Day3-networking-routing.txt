@@ -1,0 +1,151 @@
+Routers
+----------
+- its a networking device to allow communication between 2 or more NETWORKS.
+- a home router
+	- is a combination of everything
+		- router
+		- modem
+		- switch
+- Types of routers:
+	1. Branch router
+		- used for small org. 
+		- series: 800, 1800, 2800, 2900..
+	2. Internet-edge router
+		- used by mid-level orgs. 
+		- series: 1000, 7000, 7500, 7560, 7600...
+	3. Service provide router
+		- used by WAN or big/huge orgs. like ISPs.
+		- series: 900, 1000, 7200, 7300, 7600...
+		
+Routing:
+--------
+- is a process of selecting path/route along which the data can be transfered from source to destination. 
+- routing is done with the help of router
+- routing works on "network layer" of OSI model.
+- routing works on "internet layer" of TCP/IP model.
+- Routing Algo. are used for routing the packets
+	- Routing Algo = is a software responsible for deciding the optimal path.
+- Types of Routing:
+	1. Static routing
+	2. Default routing
+	3. Dynamic routing
+	
+Static routing:
+---------------
+- aka non-adaptive routing
+- admins manually adds routes in the routing table.
+
+- advantages:
+	- no over head
+		- no cpu usage, thus CHEAP.
+	- Bandwidth
+		- no bandwidth usage between routers
+	- security
+		- its more secured, bcoz, admins only allow the particular traffic.
+		
+- disadvantages:
+	- for larger network, its very difficult to add each route.
+	- admins must have GOOD knowledge on topologies.
+	
+	
+Default routing:
+------------------
+- its a technique in which a router is configured to send all the pkts to the same hop.
+- 
+
+Dynamic routing:
+-----------------
+- aka adaptive routing
+- its a technique where router adds a new route in the routing table for each pkt. 
+- dynamic routing basically uses protocols for adding the routes. 
+- in case of a router failure, automcatically adjustments will be made to reach the destination.
+
+advantages:
+- its easier
+- its more effective in selecting the best optimal path.
+
+disadvantages:
+- its more expensive, in terms of 	
+	- CPU,
+	- Bandwidth
+- its less secure than default and static routing.
+
+####################################################################################
+####################################################################################
+Cloud: account creation:
+-----------------
+AWS 
+	- debit/credit card -> Rs 2 -> refunded
+	- email id (root id)
+	- phone number
+
+Azure
+	- credit card -> Rs 2 -> refunded
+	- email id 
+	- phone number
+	- 13,300 for 1st month. -> free trial
+	- pay-as-you-go
+	- enterprise -> companies
+
+Core services
+- compute - Power CPU, Memory
+	- azure virtual machines
+	- azure virtual machine scale set (VMSS)
+	- azure app service
+	- azure function app -> serverless computing
+- network
+	- azure virtual network
+	- azure CDN
+	- azure traffic manager 
+	- azure load balancer
+- storage
+	- BLOB - "Binary Large OBject"
+	- Azure file share
+	- Azure queue storage
+	- Azure table storage --> database
+	- Azure data disk	--> Operating system as permanent disk.
+- identity
+	- user & group creation
+	- 
+####################################################################################
+####################################################################################
+
+Terms:
+-------
+1. Aux port
+	- auxilary port
+	- used as a dial up for remote management.
+2. Serial port
+	- used for configuration, diagnostics or emergency maintainence
+	- used for connection routers
+3. Console port
+	- a physical port that allows communication & control of the devices.
+	- its a CLI for configuration, troubleshooting and monitoring.
+4. FastEthernet port (fa)
+	- upto 10Kms
+	- 100 Mbps
+	- in 1995
+5. GigabitEthernet port
+	- in 1999
+	- 10 times faster than FastEthernet
+	- 1000 Mbps (1 Gbps)
+	
+Routing:
+###########
+1. Static routing
+	- no protocols are used here.
+	- you need to add routes "manually".
+	- it requires 2 things
+		1. IP & subnet mask
+		2. outgoing interface/next hop address.
+2. Dynamic routing
+	- it uses protocols to perform routing
+	- Major protocols:
+		1. IRP = Interior Routing Protocol
+			a. RIP
+			b. EIGRP
+			c. OSPF
+			d. IS-IS
+		2. ERP = Exterior Routing Protocol
+			a. EGP
+			b. BGP

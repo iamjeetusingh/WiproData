@@ -1,0 +1,96 @@
+Switching
+Routing
+Cisco IOS
+GNS3 
+Cisco Packet Tracer
+==========================================================================
+Switching
+---------
+- Switch 	= a device to connect 2 or more computers
+- Switching = the transfer of data pkt through a network switch
+- cheap till very expensive range
+- types of switches
+	- unmanaged switch
+		- which does not provide any advance features like vlans.
+		- these are similar to HUBs.
+		- thus, not an industry standard.
+	- managed switch
+		- these are the industry standard.
+		- they provide additional features.
+		- Cisco, Juniper, HP
+- it works at layer 2 (data link layer)
+- it works on MAC addresses
+- it maintains the MAC address table.
+
+Cisco heirarchical design model
+--------------------------------
+1. Access layer switch
+	- your computers are directly connected here.
+	- these are the cheapest switches
+	- Range: 1900-2900
+2. Distribution layer switch
+	- used by ISPs
+	- these switches sits on the top of access layer switch
+	- these are costly than the ALS
+	- Range: 3000-5000
+3. Core layer switch
+	- these are responsible for managing huge networks
+	- Very expensive/costly
+	- Range: 7000, 8000, 10000, 12000..
+	
+Types of switches:
+-------------------
+Virtual switch 		- inside the VM env.
+Routing  switch		- for connecting LANs.
+Unmanaged switch	- small/home networks.
+Managed switch		- industries/big networks.
+LAN switch			- these avoid the overlapping of data packets
+PoE switch			- Power over Ethernet, Gigabit ethernet
+Smart switch		- partial managed switch, has additional control over data transmission
+
+
+NOTE: all the managed switches will have by-default 1 VLAN (VLAN-1) present.
+
+
+Layer 2 swtiches:
+-------------------
+- it works on Layer 2 (data link layer)
+- it deals with MAC addresses
+- it uses MAC to determine where to send the data.
+- are traditional and common switches
+
+Layer 3 swtiches (network):
+-------------------
+- aka multi-layer switches
+- bcoz these work on layer 3 & layer 2.
+- this layer deals with the IP address of the machine.
+- since it is working on layer 3, it deals with the routing.
+- to allow communication between 2 VLANs, we can use layer 3 switch.
+- it uses inter-vlan routing to communicate.
+- Layer 3 switch has SVI (Switch Virtual Interface) to connect to VLANs.
+
+
+########################################################################
+Remoting
+----------
+Windows	
+ - GUI -> RDP (3389)
+ - CLI -> PowerShell remoting (5985/5986)
+
+Linux
+ - GUI -> TigerVNC (59XX)
+ - CLI -> Telnet (23), SSH (22)
+
+Web browser based remoting - port 80(HTTP) / 443 (HTTPS)
+########################################################################
+
+Cross-Over cable - similar devices
+- switch-to-switch
+- Router-to-router
+- Route-to-PC
+- PC-to-PC
+
+Straight-through cables
+- switch-to-router
+- switch-to-PC
+- switch-to-server
