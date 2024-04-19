@@ -1,0 +1,102 @@
+UNIX
+- it was launched publicly on 1st jan 1970
+- UNIX = UNICS = UNiplexed Information Computing System.
+
+NOTE: the difference between 1st jan 1970 and today == EPOCH date.
+
+
+Opensource
+	- free to use
+	- free to download
+	- free to share
+	- source code can be changed
+	- Ex: Linux operating system
+	
+Freeware
+	- free to use
+	- free to download
+	- free to share
+	- no source code can be changed
+	- Ex: UNIX operating system
+	
+Linux
+- 17th sept 1991
+- Linux is derived from UNIX.
+
+
+Linux is meant to be ROOT,
+Windows is meant to be REBOOT.
+
+
+in win = administrator
+in linux = root
+
+top 500 supercomputer --> LINUX OS.
+
+
+- by default, 7 users (same or different) can login at the same time. 
+	- if you make changes in kernel, then this number can go upto 44.
+	
+GUI & CLI - UNIX
+CLI & GUI - Linux  99.99999999% --> CLI in Linux
+
+SELinux
+	- security enhanced linux
+	- by default, denies to every incoming request that tries to modify the kernel.
+	- 3 modes of SELinux
+		1. enforcing 	=> 100% active
+		2. permission 	=> partial active
+		3. disabled		=> 100% inactive
+	
+types of shell
+	- C shell (csh)
+	- Korn shell (ksh)
+	- bourne shell (sh)
+	- bourne again shell (bash)	--> default shell in all new OSs.
+	- POSIX
+	- tcsh
+all installed shell names are present in "/etc/shells"
+
+
+Runlevel
+---------------
+- its the mode, in which you want to start the server.
+- 7 types of runlevel:
+	init 0	= halt/shutdown								= poweroff.target
+	init 1	= single user maintainence mode, no NFS		= multi-user.target
+	init 2	= multi-user maintainence mode, no NFS		= multi-user.target
+	init 3	= fully functional server in CLI mode		= multi-user.target
+	init 4	= unused till date							= NA
+	init 5	= init 3 + GUI								= graphical.target
+	init 6	= reboot/restart							= reboot.target
+	
+Standard: Linux uses 14 sub-directories to store the data.
+
+windows = folder		software
+linux   = directory		package
+
+
+
+Filesytem Hierarchy standard:
+--------------------------------
+/
+	- /bin		= contains cmds executed by regular users.
+	- /sbin		= contains cmds executed by only ROOT user.
+	- /home 	= home directory for regular users
+					- harika -> /home/harika
+					- jeetu  -> /home/jeetu
+					- ayush  -> /home/ayush
+					- batman -> /home/batman
+	- /root 	= home directory for ROOT user.
+	- /etc		= contains all the configuration data in it.
+	- /lib		= contains all the library header files in it. (for developers)
+	- /libx64	= contains all the 64bit OS library header files in it. (for developers)
+	- /var		= variable length files. log files are stored here.
+	- /dev		= device related files are stored here.
+	- /proc		= all running processes are stored here.
+	- /usr		= all installed applications are stored here.
+	- /tmp		= all temp files are stored.
+	- /mnt		= mount point for all devices
+					/mnt/myPD
+	- /boot		= contains all the bootable files in it.
+	
