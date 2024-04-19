@@ -100,3 +100,37 @@ Filesytem Hierarchy standard:
 					/mnt/myPD
 	- /boot		= contains all the bootable files in it.
 	
+RAM: 4GB
+HDD: 30GB
+Core: 2
+
+
+for remoting, we need:
+--------------------------
+1. IP address of the remote linux server 
+	- public IP address: when connecting via internet.
+	- private IP address: when connecting on
+							- same host.
+							- VPN
+2. tool(s) for connecting to remote server
+	- putty
+	- MTputty
+	- MobaXTerm
+	- Windows PowerShell
+
+3.  username & password			/OR
+	username & SSH keys
+
+command to change computer name:
+#hostnamectl set-hostname <name>
+	close & open terminal again.
+	
+screenshot --> photo, MBs
+snapshot   --> capture a VM's state, GBs
+
+
+Please note:
+	- install the VM
+	- disable the SELinux
+	- take the SNAPSHOT of the virtual machine.
+	

@@ -1,0 +1,18 @@
+    1  echo $SHELL
+    2  cat   /etc/shells 
+    3  whoami
+    4  hostname
+    5  pwd
+    6  su - jeetu
+    7  hostnamectl   set-hostname   svr.jeetusingh.in
+    8  hostname
+    9  getenforce 
+   10  vim  /etc/selinux/config 
+   11  init 6
+   12  runlevel
+   13  systemctl get-default 
+   14  init  3
+   15  runlevel
+   16  init 5
+   17  history 
+   18  history > /root/Desktop/LinuxBasicsCmds.txt
