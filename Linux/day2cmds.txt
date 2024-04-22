@@ -1,0 +1,195 @@
+    1  echo $SHELL
+    2  cat   /etc/shells 
+    3  whoami
+    4  hostname
+    5  pwd
+    6  su - jeetu
+    7  hostnamectl   set-hostname   svr.jeetusingh.in
+    8  hostname
+    9  getenforce 
+   10  vim  /etc/selinux/config 
+   11  init 6
+   12  runlevel
+   13  systemctl get-default 
+   14  init  3
+   15  runlevel
+   16  init 5
+   17  history 
+   18  history > /root/Desktop/LinuxBasicsCmds.txt
+   19  clear
+   20  history 
+   21  ip add
+   22  ip add show ens33
+   23  ls
+   24  mkdir d2
+   25  ls
+   26  cd d2/
+   27  pwd
+   28  ls
+   29  touch   touchFile.txt
+   30  ls
+   31  date
+   32  ls -l
+   33  date
+   34  touch   touchFile.txt
+   35  ls -l
+   36  cat  >  catFile.txt
+   37  cat catFile.txt 
+   38  cat /etc/shells 
+   39  cat catFile.txt 
+   40  cat  >  catFile.txt
+   41  cat catFile.txt 
+   42  cat  >>  catFile.txt
+   43  cat catFile.txt 
+   44  ls
+   45  cat 1.txt
+   46  cat > 1.txt
+   47  cat > a.txt
+   48  cat 1.txt a.txt > mixed.txt
+   49  cat mixed.txt 
+   50  cat > mixed.txt 
+   51  cat mixed.txt 
+   52  gedit    gedit.txt
+   53  date
+   54  cal
+   55  gedit    gedit.txt  &
+   56  date
+   57  cal
+   58  nano  nanoFile.txt
+   59  cat nanoFile.txt 
+   60  vi   /etc/passwd
+   61  vim  /etc/passwd
+   62  vim  vimFile.txt
+   63  cat vimFile.txt 
+   64  vim vimFile.txt 
+   65  ls
+   66  cat vimFile.txt 
+   67  vim nanoFile.txt 
+   68  cat nanoFile.txt 
+   69  ls
+   70  rm  nanoFile.txt 
+   71  ls
+   72  rm -f  nanoFile.txt 
+   73  ls
+   74  touch t{1..100}.txt
+   75  ls
+   76  ls | wc -l
+   77  ls
+   78  rm -f t?.txt
+   79  ls
+   80  ls | wc -l
+   81  ls
+   82  rm -f t??.txt
+   83  ls | wc -l
+   84  ls
+   85  rm -f t???.txt
+   86  ls
+   87  touch t{1..100}.txt
+   88  ls | wc -l
+   89  rm -f t*.txt
+   90  ls | wc -l
+   91  ls
+   92   history 
+   93  man  rm
+   94  ls
+   95  mkdir  dir1/dir2/dir3/dir4/dir5/dir6
+   96  mkdir  -p   dir1/dir2/dir3/dir4/dir5/dir6
+   97  ls
+   98  ls -R dir1/
+   99  ls
+  100  cat 1.txt 
+  101  cp  1.txt   dir1/
+  102  ls dir1/
+  103  cp  1.txt   number.txt
+  104  ls
+  105  cat number.txt 
+  106  ls
+  107  mv   a.txt   dir1/
+  108  ls dir1/
+  109  ls
+  110  mv  1.txt  alphabet.txt
+  111  ls
+  112  cat alphabet.txt 
+  113  ls
+  114  mv  catFile.txt   .catFile.txt 
+  115  ls
+  116  ls -a
+  117  mv .catFile.txt   catFile.txt 
+  118  ls
+  119  pwd
+  120  ls
+  121  cat alphabet.txt 
+  122  cd  /tmp
+  123  cat alphabet.txt 
+  124  ls
+  125  cd -
+  126  cat  /root/d2/alphabet.txt 
+  127  cd -
+  128  cat  /root/d2/alphabet.txt 
+  129  cd -
+  130  history 
+  131  ls
+  132  pwd
+  133  cat  number.txt 
+  134  cd /
+  135  ls
+  136  cat  number.txt 
+  137  cat   /root/d2/number.txt 
+  138  cd 
+  139  pwd
+  140  cd -
+  141  cd /root/d2/
+  142  ls
+  143  pwd
+  144  mkdir  /day2
+  145  ls
+  146  ls /
+  147  touch   /day2/d2-commands.txt
+  148  ls /day2/
+  149  rm /day2/d2-commands.txt 
+  150  ls /day2/
+  151  touch   /day2/d2-commands.txt
+  152  ls
+  153  mv /day2/d2-commands.txt   .
+  154  ls
+  155  ls -l
+  156  ls -l  alphabet.txt  dir1
+  157  ls -ld  alphabet.txt  dir1
+  158  ls
+  159  pwd
+  160  rm -f *.txt
+  161  ls
+  162  rm -rf dir1/  newdir/
+  163  ls
+  164  touch t1 t2 t3
+  165  ll
+  166  chmod  666   t1
+  167  ll t1
+  168  chmod   777   t1
+  169  ll t1
+  170  chmod   764   t1
+  171  ll t1
+  172  ll
+  173  chmod   ugo=rwx   t2
+  174  ls l t2
+  175  ls -l t2
+  176  chmod   ugo=rwx   t2
+  177  ls -l t2
+  178  chmod  a-x  t2
+  179  ls -l t2
+  180  chmod o-w t2
+  181  ls -l t2
+  182  chown  jeetu   t2 
+  183  ls -l t2
+  184  chgrp  wheel  t2
+  185  ls -l t2
+  186  ls -la t3
+  187  chown  jeetu:wheel  t3
+  188  ls -la t3
+  189  cat  >  /ReadMe.txt
+  190  ls -l /ReadMe.txt 
+  191  chmod  o-r  /ReadMe.txt 
+  192  ls -l /ReadMe.txt 
+  193  chgrp  wheel  /ReadMe.txt 
+  194  ls -l /ReadMe.txt 
+  195  history  > /root/Desktop/day2cmds.txt

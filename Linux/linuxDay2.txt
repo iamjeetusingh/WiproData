@@ -1,0 +1,158 @@
+file mgmt 
+	- create, modify, delete, view, copy, move, hide, unhide, rename
+directory mgmt
+	- create, change directory, list, delete, accessing directory
+permissions
+	- read, write, execute, ACLs
+user mgmt
+	- create, modify, delete, giving access to a group, sudo user.
+service mgmt
+	- start, stop, enable, disable, restart,...
+package mgmt
+	- install, query/info, upgrade, uninstall
+storage mgmt	
+	- list the size, create partition, edit, delete
+process mgmt
+	- list, change the priority of the process (nice & renice).
+network mgmt
+	- viewing the IP add, changing the IP add, restart the network.
+backup tools
+	- archive & compression tools.
+searching
+pipe symbol, redirection 
+
+
+file mgmt 
+	- create a file using:
+		- touch
+			- used for creating blank files
+			- updating the time stamp of a file or directory
+				- last time the file updated => timestamp
+			- syntax:
+				# touch filename.txt
+			- when file does not exists, touch cmd cretes a file.
+			- when file exists, touch cmd updates the timestamp of that file.
+		- cat
+			- create
+				# cat > filename
+			- view
+				# cat   filename
+			- over-write
+				# cat > filename
+			- append
+				# cat >> filename
+			- add data of 2 or more files into 1
+			Ques: how will you save your file from being over-written using CAT editor???
+		- gedit
+			- a graphical editor.
+			- similar to notepad in windows.
+			- it will only work on GUI linux.
+			- syntax:
+				# gedit filename.txt
+					- foreground process.
+				# gedit filename.txt &
+					- background process.
+		- nano
+			- syntax:
+				# nano filename.txt
+		- vi/vim
+			vi  = VIrtual editor
+			vim = Virtual editor IMproved
+		Ques: VI vs VIM editor (at least 5 differences)
+		- syntax:
+			# vim  filename.txt
+			
+			
+vim editor
+- 2 modes
+	1. command mode
+		- to type the cmd for the vim editor.
+		- cmds
+			yy = copying the line
+			p  = pasting the line
+			dd = deleting single line
+			:set number = set the number of line in the file.
+	2. Insert mode
+		- to insert the data in file
+		
+Task: Use single command to create 100 files.
+# touch t{1..100}.txt
+
+Wildcards
+-----------
+1. ?
+	- used for selection using each character (alpha, number, special chars)
+	- delete the file that starts with "t", ends with ".txt" but has 1 char in between t & .txt
+		t11.txt till t99.txt
+			# rm -f t?.txt
+2. *
+	- everything
+	- it will delete everything.
+	
+copying a file:
+# cp  <source-of-copy>  <destination>
+# cp  <source-of-copy>  <destination-is-filename>   		//it will create a replica with new name
+# cp  <source-of-copy>  <destination-is-directory-name>		//it will copy the file.
+
+moving file
+# mv  <source-of-copy>  <destination>
+
+create a directory:
+# mkdir <directory>
+
+changing the directory
+# cd
+
+Path
+------
+	1. Absolute path
+		- starts from "/"
+		- always works on any path.
+	2. Relative path
+		- works on the same folder, or parent folder
+		
+Permissions:
+----------------
+types of permissions:
+	- read 		(r) -> 4
+	- write 	(w) -> 2
+	- execute 	(x) -> 1
+	---------------------
+	total			-> 7
+	---------------------
+
+types of users (on which permissions are applied):
+	- owner/user	-> u	(file belong to)
+	- group			-> g
+	- others		-> o
+	-----------------------
+	all				-> a
+	-----------------------
+	
+types of files in linux:
+	1. -	-> file (txt, pdf, mp3, cfg, etc...)
+	2. d	-> directory
+	3. l	-> link (symobolic link files - hard link & soft link)
+	4. c	-> char device file
+	5. s	-> local socket file
+	6. p	-> named pipe file
+	7. b	-> block device file
+	
+to list all various types
+	# ls -l /dev
+	
+to change the permissions of a file:
+	1. numerical method
+		# chmod 764 t1.txt
+	2. symobolic/alphabetical method
+		# chmod ugo=rwx  t2.txt
+			ugo = owner, group, others
+			=   = assign		(+ -> add permissions, - -> remove)
+			rwx = read, write & execute
+		
+to change ownership & group ownership of a file:
+	1. chown
+		- changes owner & group owner
+	2. chgrp
+		- changes only group ownership
+		
