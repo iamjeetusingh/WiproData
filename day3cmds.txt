@@ -1,0 +1,122 @@
+    1  echo $SHELL
+    2  cat   /etc/shells 
+    3  whoami
+    4  hostname
+    5  pwd
+    6  su - jeetu
+    7  hostnamectl   set-hostname   svr.jeetusingh.in
+    8  hostname
+    9  getenforce 
+   10  vim  /etc/selinux/config 
+   11  init 6
+   12  runlevel
+   13  systemctl get-default 
+   14  init  3
+   15  runlevel
+   16  init 5
+   17  pwd
+   18  exit
+   19  cd /boot
+   20  ls -l
+   21  ls -lh
+   22  cd
+   23  vim /etc/services 
+   24  vim /etc/passwd
+   25  vim /etc/shadow
+   26  passwd  jeetu
+   27  vim /etc/shadow
+   28  useradd steve
+   29  vim /etc/passwd
+   30  cat /etc/passwd  |  grep  steve
+   31  chfn  steve
+   32  cat /etc/passwd  |  grep  steve
+   33  usermod -c "Captain America" steve
+   34  cat /etc/passwd  |  grep  steve
+   35  grep  steve  /etc/passwd
+   36  history 
+   37  man useradd
+   38  useradd -c "Peter Parker" -u 5000 -s /bin/bash   spiderman
+   39  cat /etc/passwd | grep spiderman
+   40  userdel -r spiderman
+   41  useradd -c "Peter Parker" -u 5000 -s /bin/ksh   spiderman
+   42  cat /etc/passwd | grep spiderman
+   43  usermod  -s  /bin/bash   spiderman 
+   44  cat /etc/passwd | grep spiderman
+   45  chsh   spiderman
+   46  cat /etc/shells 
+   47  chsh   spiderman
+   48  cat /etc/passwd | grep spiderman
+   49  useradd batman
+   50  grep batman /etc/passwd
+   51  userdel -r batman
+   52  grep batman /etc/passwd
+   53  getent group
+   54  getent group | wc -l
+   55  getent group
+   56  groupadd avengers
+   57  getent group | grep avengers
+   58  usermod -G avengers steve
+   59  usermod -G avengers spiderman
+   60  getent group | grep avengers
+   61  useradd -G avengers thor
+   62  getent group | grep avengers
+   63  id thor
+   64  ls
+   65  cd d2/
+   66  ll
+   67  ls
+   68  rm -f t*
+   69  ls
+   70  cat > readme.txt
+   71   ls -l
+   72  getfacl   readme.txt 
+   73  setfacl   -m  u:jeetu:rw- readme.txt 
+   74  setfacl   -m  g:avengers:r-- readme.txt 
+   75   ls -l
+   76  getfacl   readme.txt 
+   77  pwd
+   78  ls
+   79  mv readme.txt  /
+   80  ls /
+   81  cd /
+   82  rm ReadMe.txt 
+   83  ls
+   84  ll readme.txt 
+   85  getfacl  readme.txt 
+   86  cd
+   87  cat > /salary.txt
+   88  ls -l /salary.txt 
+   89  chmod 640 /salary.txt 
+   90  ls -l /salary.txt 
+   91  groupadd accounts
+   92  useradd -G accounts user1
+   93  useradd -G accounts user2
+   94  getent group accounts
+   95  chgrp  accounts   /salary.txt 
+   96  ls -l /salary.txt 
+   97  chmod g+w /salary.txt 
+   98  ls -l /salary.txt 
+   99  ls -l /readme.txt 
+  100  setfacl  -b  /readme.txt 
+  101  ls -l /readme.txt 
+  102  vim  /etc/sudoers
+  103  visudo 
+  104  EDITOR=vim visudo
+  105  cat /etc/passwd | grep loki
+  106  passwd thor
+  107  EDITOR=vim visudo
+  108  grep avengers /etc/group
+  109  EDITOR=vim visudo
+  110  groupadd wipro
+  111  useradd -G wipro  tomar
+  112  cat /etc/group | grep wipro
+  113  getent group wipro
+  114  EDITOR=vim visudo
+  115  mkdir /wipro
+  116  ls -ld /wipro/
+  117  chgrp wipro /wipro
+  118  ls -ld /wipro/
+  119  chmod o-rx /wipro
+  120  ls -ld /wipro/
+  121  su - tomar
+  122  history > /root/Desktop/day3cmds.txt 

@@ -1,0 +1,140 @@
+user mgmt
+################################
+	- create
+	- modify
+	- delete
+	- giving access to a group
+	- sudo user
+	
+Commands:
+-----------
+	- useradd
+	- usermod
+	- userdel
+	- groupadd
+	- visudo
+
+files:
+-------
+	/etc/passwd
+	/etc/shadow
+	/etc/sudoers
+	
+/etc/passwd
+------------
+- this file stores user's information.
+- it contains 7 columns, seperated by :
+	1. login user name
+	2. x -> referenced passwd --> /etc/shadow
+	3. user ID
+		root user: "0"
+		regular	 : 1000+
+									RHEL 6		RHEL 7
+			Root				  	0			0
+			Service Accounts	 	1 - 499		1 - 999
+			Regular				 	500		  	1000
+	4. group ID
+		- generally, it is similar to User ID (but not always)
+	5. full name / description / comment --> "chfn", usermod
+	6. default home directory of the user.
+	7. default shell assigned to the user.
+- whenever a user is added, it will be appended to the bottom of the file.
+
+/etc/shadow
+-------------
+- contains user's PASSWORD information
+- it contains 9 columns in it.
+	1. login user name
+	2. true encrypted passwd
+	3. last pwd change (number of days since 1st Jan 1970 till date)
+	4. 0 -> Minimum passwd age.
+	5. 99999 -> Maximum passwd age. ~> 273Yrs (60)
+	6. 7 -> warning days 
+	7. inactive days
+	8. account expiry
+	9. unused till date. --> future purpose.
+	
+command to create a user:
+# useradd <option> <username>
+
+command to modify a user:
+# usermod <option> <username>
+
+command to delete a user:
+# userdel -r <username>
+
+Group admins:
+--------------
+	- groupadd
+	- groupmod
+	- groupdel
+	
+ACL
+-----
+- access control list
+- it allows more granular level permissions to be applied for a user of a group.
+
+to list ACLs:
+# getfacl filename.txt
+
+to set the ACL for a user:
+# setfacl -m u:<username>:<permissions>
+
+to set the ACL for a group:
+# setfacl -m g:<groupname>:<permissions>
+
+to remove the permissions
+# setfcl -b filename
+
+Special permissions:
+-----------------------
+	- SUID
+	- SGID
+	- Sticky bit
+-----------------------
+
+SUDO users:
+-------------
+- Super User DO
+- its a regular user with limited root permissions
+- network admins, storage admins, infra admins, VM admins....
+- file: /etc/sudoers (read-only file)
+- cmd : visudo
+
+1. adding a new user with ALL (equivalent to ROOT user) permissions
+	# thor    ALL=(ALL)       ALL
+	
+2. adding a new user with pre-defined permissions
+3. adding user with custom permissions
+4. adding a group with all/pre-defined/custom 
+
+
+Task:
+-----
+Create a group "WIPRO". Create a user with your last name and add this user to WIPRO group. Give WIPRO group networking and storage permissions and verify. Also, create a new folder "/wipro" & allow the access of read & execution on this group and verify.
+
+Solution:
+-----------
+[root@svr ~]# groupadd wipro
+[root@svr ~]# useradd -G wipro  tomar
+[root@svr ~]# cat /etc/group | grep wipro
+wipro:x:5007:tomar
+[root@svr ~]# getent group wipro
+wipro:x:5007:tomar
+[root@svr ~]# EDITOR=vim visudo
+[root@svr ~]# mkdir /wipro
+[root@svr ~]# ls -ld /wipro/
+drwxr-xr-x 2 root root 6 Apr 23 17:08 /wipro/
+[root@svr ~]# chgrp wipro /wipro
+[root@svr ~]# ls -ld /wipro/
+drwxr-xr-x 2 root wipro 6 Apr 23 17:08 /wipro/
+[root@svr ~]# chmod o-rx /wipro
+[root@svr ~]# ls -ld /wipro/
+drwxr-x--- 2 root wipro 6 Apr 23 17:08 /wipro/
+[root@svr ~]# su - tomar
+[tomar@svr ~]$ ls /wipro/
+haha.txt
+[tomar@svr ~]$ cat > /wipro/haha.txt 
+-bash: /wipro/haha.txt: Permission denied
+[tomar@svr ~]$ 
+[tomar@svr ~]$ 
