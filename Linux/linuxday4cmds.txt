@@ -1,0 +1,484 @@
+    1  echo $SHELL
+    2  cat   /etc/shells 
+    3  whoami
+    4  hostname
+    5  pwd
+    6  su - jeetu
+    7  hostnamectl   set-hostname   svr.jeetusingh.in
+    8  hostname
+    9  getenforce 
+   10  vim  /etc/selinux/config 
+   11  init 6
+   12  runlevel
+   13  systemctl get-default 
+   14  init  3
+   15  runlevel
+   16  init 5
+   17  pwd
+   18  exit
+   19  cd /boot
+   20  ls -l
+   21  ls -lh
+   22  cd
+   23  vim /etc/services 
+   24  chage -l  jeetu
+   25  su - jeetu
+   26  su - steve
+   27  su - user1
+   28  which iptables
+   29  which useradd
+   30  passwd steve
+   31  su - steve
+   32  passwd spiderman
+   33  mail
+   34  passwd thor
+   35  su - thor
+   36  su - ironman
+   37  su - spiderman
+   38  touch /wipro/haha.txt
+   39  ls /wipro/
+   40  su - steve
+   41  history 
+   42  history > /root/Desktop/LinuxBasicsCmds.txt
+   43  clear
+   44  history 
+   45  ip add
+   46  ip add show ens33
+   47  ls
+   48  mkdir d2
+   49  ls
+   50  cd d2/
+   51  pwd
+   52  ls
+   53  touch   touchFile.txt
+   54  ls
+   55  date
+   56  ls -l
+   57  date
+   58  touch   touchFile.txt
+   59  ls -l
+   60  cat  >  catFile.txt
+   61  cat catFile.txt 
+   62  cat /etc/shells 
+   63  cat catFile.txt 
+   64  cat  >  catFile.txt
+   65  cat catFile.txt 
+   66  cat  >>  catFile.txt
+   67  cat catFile.txt 
+   68  ls
+   69  cat 1.txt
+   70  cat > 1.txt
+   71  cat > a.txt
+   72  cat 1.txt a.txt > mixed.txt
+   73  cat mixed.txt 
+   74  cat > mixed.txt 
+   75  cat mixed.txt 
+   76  gedit    gedit.txt
+   77  date
+   78  cal
+   79  gedit    gedit.txt  &
+   80  date
+   81  cal
+   82  nano  nanoFile.txt
+   83  cat nanoFile.txt 
+   84  vi   /etc/passwd
+   85  vim  /etc/passwd
+   86  vim  vimFile.txt
+   87  cat vimFile.txt 
+   88  vim vimFile.txt 
+   89  ls
+   90  cat vimFile.txt 
+   91  vim nanoFile.txt 
+   92  cat nanoFile.txt 
+   93  ls
+   94  rm  nanoFile.txt 
+   95  ls
+   96  rm -f  nanoFile.txt 
+   97  ls
+   98  touch t{1..100}.txt
+   99  ls
+  100  ls | wc -l
+  101  ls
+  102  rm -f t?.txt
+  103  ls
+  104  ls | wc -l
+  105  ls
+  106  rm -f t??.txt
+  107  ls | wc -l
+  108  ls
+  109  rm -f t???.txt
+  110  ls
+  111  touch t{1..100}.txt
+  112  ls | wc -l
+  113  rm -f t*.txt
+  114  ls | wc -l
+  115  ls
+  116   history 
+  117  man  rm
+  118  ls
+  119  mkdir  dir1/dir2/dir3/dir4/dir5/dir6
+  120  mkdir  -p   dir1/dir2/dir3/dir4/dir5/dir6
+  121  ls
+  122  ls -R dir1/
+  123  ls
+  124  cat 1.txt 
+  125  cp  1.txt   dir1/
+  126  ls dir1/
+  127  cp  1.txt   number.txt
+  128  ls
+  129  cat number.txt 
+  130  ls
+  131  mv   a.txt   dir1/
+  132  ls dir1/
+  133  ls
+  134  mv  1.txt  alphabet.txt
+  135  ls
+  136  cat alphabet.txt 
+  137  ls
+  138  mv  catFile.txt   .catFile.txt 
+  139  ls
+  140  ls -a
+  141  mv .catFile.txt   catFile.txt 
+  142  ls
+  143  pwd
+  144  ls
+  145  cat alphabet.txt 
+  146  cd  /tmp
+  147  cat alphabet.txt 
+  148  ls
+  149  cd -
+  150  cat  /root/d2/alphabet.txt 
+  151  cd -
+  152  cat  /root/d2/alphabet.txt 
+  153  cd -
+  154  history 
+  155  ls
+  156  pwd
+  157  cat  number.txt 
+  158  cd /
+  159  ls
+  160  cat  number.txt 
+  161  cat   /root/d2/number.txt 
+  162  cd 
+  163  pwd
+  164  cd -
+  165  cd /root/d2/
+  166  ls
+  167  pwd
+  168  mkdir  /day2
+  169  ls
+  170  ls /
+  171  touch   /day2/d2-commands.txt
+  172  ls /day2/
+  173  rm /day2/d2-commands.txt 
+  174  ls /day2/
+  175  touch   /day2/d2-commands.txt
+  176  ls
+  177  mv /day2/d2-commands.txt   .
+  178  ls
+  179  ls -l
+  180  ls -l  alphabet.txt  dir1
+  181  ls -ld  alphabet.txt  dir1
+  182  ls
+  183  pwd
+  184  rm -f *.txt
+  185  ls
+  186  rm -rf dir1/  newdir/
+  187  ls
+  188  touch t1 t2 t3
+  189  ll
+  190  chmod  666   t1
+  191  ll t1
+  192  chmod   777   t1
+  193  ll t1
+  194  chmod   764   t1
+  195  ll t1
+  196  ll
+  197  chmod   ugo=rwx   t2
+  198  ls l t2
+  199  ls -l t2
+  200  chmod   ugo=rwx   t2
+  201  ls -l t2
+  202  chmod  a-x  t2
+  203  ls -l t2
+  204  chmod o-w t2
+  205  ls -l t2
+  206  chown  jeetu   t2 
+  207  ls -l t2
+  208  chgrp  wheel  t2
+  209  ls -l t2
+  210  ls -la t3
+  211  chown  jeetu:wheel  t3
+  212  ls -la t3
+  213  cat  >  /ReadMe.txt
+  214  ls -l /ReadMe.txt 
+  215  chmod  o-r  /ReadMe.txt 
+  216  ls -l /ReadMe.txt 
+  217  chgrp  wheel  /ReadMe.txt 
+  218  ls -l /ReadMe.txt 
+  219  history  > /root/Desktop/day2cmds.txt
+  220  ls -l /dev
+  221  ls
+  222  mkdir newdir
+  223  ls -ld dir1/ newdir/
+  224  cd newdir/
+  225  ls
+  226  ls -a
+  227  cd ..
+  228  cd -
+  229  ls
+  230  cd ..
+  231  ls
+  232  cd dir1/
+  233  ls -l
+  234  cd /boot/
+  235  ls -l
+  236  vim /etc/passwd
+  237  vim /etc/shadow
+  238  passwd  jeetu
+  239  vim /etc/shadow
+  240  useradd steve
+  241  vim /etc/passwd
+  242  cat /etc/passwd  |  grep  steve
+  243  chfn  steve
+  244  cat /etc/passwd  |  grep  steve
+  245  usermod -c "Captain America" steve
+  246  cat /etc/passwd  |  grep  steve
+  247  grep  steve  /etc/passwd
+  248  history 
+  249  man useradd
+  250  useradd -c "Peter Parker" -u 5000 -s /bin/bash   spiderman
+  251  cat /etc/passwd | grep spiderman
+  252  userdel -r spiderman
+  253  useradd -c "Peter Parker" -u 5000 -s /bin/ksh   spiderman
+  254  cat /etc/passwd | grep spiderman
+  255  usermod  -s  /bin/bash   spiderman 
+  256  cat /etc/passwd | grep spiderman
+  257  chsh   spiderman
+  258  cat /etc/shells 
+  259  chsh   spiderman
+  260  cat /etc/passwd | grep spiderman
+  261  useradd batman
+  262  grep batman /etc/passwd
+  263  userdel -r batman
+  264  grep batman /etc/passwd
+  265  getent group
+  266  getent group | wc -l
+  267  getent group
+  268  groupadd avengers
+  269  getent group | grep avengers
+  270  usermod -G avengers steve
+  271  usermod -G avengers spiderman
+  272  getent group | grep avengers
+  273  useradd -G avengers thor
+  274  getent group | grep avengers
+  275  id thor
+  276  ls
+  277  cd d2/
+  278  ll
+  279  ls
+  280  rm -f t*
+  281  ls
+  282  cat > readme.txt
+  283   ls -l
+  284  getfacl   readme.txt 
+  285  setfacl   -m  u:jeetu:rw- readme.txt 
+  286  setfacl   -m  g:avengers:r-- readme.txt 
+  287   ls -l
+  288  getfacl   readme.txt 
+  289  pwd
+  290  ls
+  291  mv readme.txt  /
+  292  ls /
+  293  cd /
+  294  rm ReadMe.txt 
+  295  ls
+  296  ll readme.txt 
+  297  getfacl  readme.txt 
+  298  cd
+  299  cat > /salary.txt
+  300  ls -l /salary.txt 
+  301  chmod 640 /salary.txt 
+  302  ls -l /salary.txt 
+  303  groupadd accounts
+  304  useradd -G accounts user1
+  305  useradd -G accounts user2
+  306  getent group accounts
+  307  chgrp  accounts   /salary.txt 
+  308  ls -l /salary.txt 
+  309  chmod g+w /salary.txt 
+  310  ls -l /salary.txt 
+  311  ls -l /readme.txt 
+  312  setfacl  -b  /readme.txt 
+  313  ls -l /readme.txt 
+  314  vim  /etc/sudoers
+  315  visudo 
+  316  EDITOR=vim visudo
+  317  cat /etc/passwd | grep loki
+  318  passwd thor
+  319  EDITOR=vim visudo
+  320  grep avengers /etc/group
+  321  EDITOR=vim visudo
+  322  groupadd wipro
+  323  useradd -G wipro  tomar
+  324  cat /etc/group | grep wipro
+  325  getent group wipro
+  326  EDITOR=vim visudo
+  327  mkdir /wipro
+  328  ls -ld /wipro/
+  329  chgrp wipro /wipro
+  330  ls -ld /wipro/
+  331  chmod o-rx /wipro
+  332  ls -ld /wipro/
+  333  su - tomar
+  334  history > /root/Desktop/day3cmds.txt 
+  335  df -h
+  336  systemc-config-kickstart
+  337  system-config-kickstart
+  338  cd  "/run/media/root/CentOS 7 x86_64"
+  339  cd
+  340  cd /run/media/root/CentOS\ 7\ x86_64/
+  341  cd
+  342  cd /run/media/root/CentOS 7 x86_64
+  343  cd  "/run/media/root/CentOS 7 x86_64"
+  344  ls
+  345  cd
+  346  cd  "/run/media/root/CentOS 7 x86_64"
+  347  ls
+  348  cd Packages/
+  349  ls
+  350  ls | wc -l
+  351  ls
+  352  ls *x86_64*
+  353  ls *x86_64* | wc -l
+  354  ls *noarch* | wc -l
+  355  pwd
+  356  cd
+  357  finger
+  358  rpm -q finger
+  359  rpm -ivh /run/media/root/CentOS\ 7\ x86_64/Packages/finger-0.17-52.el7.x86_64.rpm 
+  360  finger
+  361  cd -
+  362  ls finger*
+  363  finger
+  364  finger spiderman
+  365  cd
+  366  rpm -qa
+  367  rpm -q realmd
+  368  rpm -q finger
+  369  rpm -qa > /root/Desktop/InstalledPkgs.txt
+  370  rpm -qa | sort > /root/Desktop/InstalledPkgs.txt
+  371  rpm -qa | sort -r  > /root/Desktop/InstalledPkgs.txt
+  372  cd /run/media/root/CentOS\ 7\ x86_64/Packages/
+  373  ls finger
+  374  cd
+  375  cd /run/media/root/CentOS\ 7\ x86_64/Packages/
+  376  ls finger*
+  377  rpm -Uvh finger-0.17-52.el7.x86_64.rpm
+  378  rpm -ivh finger-0.17-52.el7.x86_64.rpm
+  379  rpm -q finger
+  380  rpm -e finger
+  381  rpm -q finger
+  382  cd
+  383  pwd
+  384  rpm -q finger
+  385  yum install finger
+  386  yum install finger -y
+  387  cd /run/media/root/CentOS\ 7\ x86_64/Packages/
+  388  ls system-config-kickstart-2.9.7-1.el7.noarch.rpm 
+  389  rpm -ivh system-config-kickstart-2.9.7-1.el7.noarch.rpm
+  390  rpm -ivh --nodeps  system-config-kickstart-2.9.7-1.el7.noarch.rpm
+  391  rpm -q system-config-kickstart
+  392  history 
+  393  rpm -ev system-config-kickstart
+  394  rpm -q system-config-kickstart
+  395  yum install -y system-config-kickstart
+  396  history  | tail -5
+  397  cd 
+  398  yum update
+  399  yum info finger
+  400  rpm -q finger
+  401  rpm -q system-config-kickstart 
+  402  yum remove -y system-config-kickstart
+  403  yum install -y git
+  404  git clone https://github.com/scottchiefbaker/dool.git
+  405  ls
+  406  cd dool/
+  407  ls
+  408  ./install.py 
+  409  dool
+  410  cd
+  411  cd /run/media/root/CentOS\ 7\ x86_64/Packages/
+  412  rpm -q vsftpd ftp telnet php
+  413  rpm -ivh ftp-0.17-67.el7.x86_64.rpm php-5.4.16-48.el7.x86_64.rpm 
+  414  rpm -ivh ftp-0.17-67.el7.x86_64.rpm 
+  415  rpm -ivh --nodeps php-5.4.16-48.el7.x86_64.rpm 
+  416  cd 
+  417  nmcli
+  418  nmcli device status 
+  419  nmcli connection 
+  420  nmcli -t device connect show ens33
+  421  nmcli -t device connect ens33 
+  422  nmcli -p device show ens33 
+  423  history  |  tail -6
+  424  history  |  tail 
+  425  nmtui
+  426  hostname
+  427  nmtui
+  428  ip add show ens33
+  429  systemctl   restart   network
+  430  ip add show ens33
+  431  nmtui
+  432  systemctl   restart   network
+  433  ip add show ens33
+  434  ifconfig
+  435  ifconfig | grep inet
+  436  ipa
+  437  myip
+  438  ifconfig | grep inet
+  439  alias myip="ifconfig | grep inet"
+  440  myip
+  441  alias myip="ifconfig | grep inet | head -1"
+  442  myip
+  443  history 
+  444  myip
+  445  alias myip="ifconfig | grep inet | head -1"
+  446  myip
+  447  vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+  448  find  /  -name  ifcfg-ens33
+  449  find  /  -name  *-ens33
+  450  updatedb 
+  451  locate   ifcfg-ens33
+  452  find  /etc  -name  *-ens33
+  453  find  /tmp  -name  *-ens33
+  454  locate   ifcfg-ens33
+  455  locate   *-ens33
+  456  vim /etc/sysconfig/network-scripts/ifcfg-ens33
+  457  ifconfig | grep inet
+  458  systemctl restart network
+  459  ifconfig | grep inet
+  460  cat   /etc/resolv.conf 
+  461  history 
+  462  systemctl enable httpd
+  463  systemctl start httpd
+  464  systemctl status httpd
+  465  service network restart
+  466  history  |  tail -5
+  467  df
+  468  df -h
+  469  cd /
+  470  ls
+  471  ls -l / 
+  472  du  -sh *
+  473  du  -sh /*
+  474  lsblk
+  475  fdisk
+  476  fdisk /dev/sda
+  477  fdisk -l  /dev/sda
+  478  lsblk 
+  479  fdisk -l  /dev/sda
+  480  cd
+  481  lsblk 
+  482  init 6
+  483  lsblk 
+  484  history  > /root/Desktop/linuxday4cmds.txt

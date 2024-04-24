@@ -1,0 +1,178 @@
+package mgmt
+	- install, query/info, upgrade, uninstall
+	
+	
+in windows, we have software (.exe, .msi)...
+in linux, we have packages (.rpm, .deb, .dpkg..)
+
+for packages:
+	- offline (ISO file)
+	- online
+		- paid
+		- free
+		
+Name of the package:
+	pkgname-version-release-architecture.rpm
+		architecture:
+			- 32bit 			= i686
+			- 64bit 			= x86_64
+			- no architecture 	= noarch
+			
+list the packages that can be only installed on 64bit architecture:
+	# ls *x86_64* | wc -l
+list the packages that can be only installed on 32bit & 64bit (noarch):
+	# ls *noarch* | wc -l
+	
+Install
+update
+query/info
+uninstalling
+
+package manager:
+-----------------
+	RPM
+		- redhat package manager
+		- default PM in centos, redhat OS
+		- used for offline installation.
+	YUM
+		- Yellowdog update manager / Yellowdog updater Modifier
+		- its a part of centos & redhat OS.
+		- used for offline installation & online installation
+	APT
+		- Advance Packaging Tool
+		- used in Ubuntu, Kali and Backtrack OS.
+	DPKG
+		- Debian packaging 
+		- Kali, Backtrack OS.
+	DNF
+		- its part of RHEL 8, CentOS8.
+		- full form is Dandified YUM
+		
+RPM:
+-----
+Install
+	# rpm  -ivh   <full-path-of-package>.rpm
+		i = install
+		v = verbose
+		h = hashing
+update
+	# rpm -Uvh <new-package-name>.rpm
+		U = update
+		
+query/info
+	# rpm -q <package-name>
+	# rpm -qa
+
+uninstalling
+	# rpm -e <package-name>
+
+
+Task:
+------
+list all installed packages on ur system & save them in a text file.
+	# rpm -qa | sort > /root/Desktop/InstalledPkgs.txt
+	
+Installing packages online:
+----------------------------
+	- RHN (RedHat Network) 
+		- RedHat Satellite server (PAID) --> production solution
+	- Mirror server in Centos
+		- online server to install pkgs. (free)
+		
+RPM has 3 issues:
+	1. full name
+	2. path of the package
+	3. dependency
+		
+
+YUM server:
+-------------
+Install
+	# yum install <package-name>
+	# yum install <package-name> -y
+
+update
+	# yum update -y
+
+query/info
+	# yum info <package-name>
+	
+uninstalling
+	# yum remove <package-name> -y
+
+Task:
+-------
+1. verify if these packages are installed or not. then,
+2. install the following packages using RPM.
+	- vsftpd
+	- ftp
+	- telnet
+	- php
+Note: if any package shows dependency error, by pass it.
+
+Ques: How to add alias permanently on linux?
+
+to find/search a file or directory, we have:
+	1. find
+		# find   <where-to-find>   <option>  <name>
+	2. locate
+		- it's a database
+		- cmd that needs to be execute before locate:
+			# updatedb
+			# locate <filename>
+
+Network mgmt:
+-------------
+	1. CLI
+		- nmcli
+			- Network Manager Command Line Interface
+		- nmtui
+			- Network Manager Text User Interface
+		- ip address
+		- ifconfig
+		- /etc/sysconfig/network-scripts/ifcfg-ens33
+	2. GUI
+		- Network settings.
+		
+Service mgmt:
+----------------
+- manage the services on linux machine.
+- actions:
+	- start
+	- stop
+	- restart
+	- enable 
+	- disable
+	- is-active
+- service-name ( d = daemon) :
+	- httpd
+	- vsftpd
+	- named
+	- sshd
+- old syntax:
+	# service   <service-name>  <action>
+	
+- new syntax:
+	# systemctl <action> <service-name>
+	
+##############################################################
+Storage Managment:
+-------------------
+- disk mgmt
+- adding the disk:
+	1. simple disk partitioning
+	2. LVM partitioning
+- cmds:
+	1. df -h
+	2. du -sh /*
+	3. lsblk
+	4. fdisk
+		# fdisk  -l  /dev/sda
+		
+simple disk partitioning:
+-------------------------
+1. add the disk to the linux
+2. create the partition
+3. create the mount point
+4. create the file system
+5. mount the partition & verify.
