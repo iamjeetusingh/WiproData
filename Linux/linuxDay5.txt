@@ -1,0 +1,85 @@
+simple disk partitioning:
+-------------------------
+1. add the disk to the linux
+2. create the partition
+	- use fdisk command
+3. create the mount point
+	# mkdir /stdpart
+4. create the file system
+	#mkfs.xfs /dev/sdb1
+5. mount the partition & verify.
+	1. temporary
+		# mount  <what-to-mount>   <where-to-mount>
+		# mount  /dev/sdb1  /stdpart
+	2. permanent
+		# vim /etc/fstab
+			1. <what-to-mount>			/dev/sdb1
+			2. <where-to-mount>			/stdpart
+			3. file system				xfs
+			4. <options-to-mount>		defaults
+			5. backup operation			0
+			6. file system check		0
+			
+LVM:
+-----
+- Logical Volume Manager 
+- of extending the current disk capacity.
+- steps for creating LVM:
+	1. add the partitions
+	2. created LVM partitions
+	3. created PV's
+	4. created VG group
+	5. created LV from VG group
+	6. create a mount point
+	7. create file system (XFS) for /dev/vg1/lv1
+	8. mount this partition (temporary or permanent)
+	9. verify.
+	
+delete the LVM partition:
+----------------------------
+1. unmounting the partition
+	# umount <partition-name>
+2. removing the mount point
+	# rm -rf /lvm
+3. remove the LV:
+	# lvremove <vgname>
+4. remove the VG
+	# vgremove
+5. remove the PV
+	# pvremove
+6. delete the partition
+	# fdisk /dev/sdc
+		d
+		w
+	# fdisk /dev/sdd
+	# fdisk /dev/sde
+7. remove the HDDs from the VMWare workstation.
+
+
+process mgmt:
+--------------
+1st process: 
+	1. init
+		- RHEL 6, Centos 6, Ubuntu 12.04, 16.04
+	2. systemd
+		- RHEL 7 & above
+		- Ubuntu 18.04 & above
+
+to list all the processes:
+	# pstree
+	# pgrep <process-name>
+	# top
+	# kill
+	
+Backup:
+--------
+	1. archive (collecting files & folder together)
+		- tar (Tarball ARchive)
+		- cmd:
+			# tar  -cvf   filename.tar     d1  d2  d3  f1  f2  f3
+				c = create
+				v = verbose
+				f = archive filename
+	2. compression (collecting files & folder together but also reducing the total size)
+		- gzip	= higher compression speed (fast)
+		- bzip2 = higher compression rate  (slow)
