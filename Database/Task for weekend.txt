@@ -1,0 +1,30 @@
+Task 1: Attach 3 disks of 5GB each. create 2 LVMs from these disks of 7GB (/lvm1) and 8GB (/lvm2) with XFS and EXT4 file systems respectively. add another hdd of 4GB and extend 2-2GB on both LVMs.
+
+Hint:
+	lvcreate -l 50%FREE -n lv1 vg1
+	lvcreate -l 50%FREE -n lv2 vg1
+	mkfs.xfs
+	mkfs.ext4
+	vgextend
+	lvextend
+	xfs_growfs
+=============================================================================================
+Task 2: Ensure that you have a windows-based domain environment (with a DC & Member). Create a group policy and apply it on the all the computers that are domain joined. This policy basically applies the same wallpaper in all the computers within the domain.
+
+Hint:
+	install 2 server or 1 server & 1 client.
+	make 1 of them as domain controller
+	on DC, create a group policy & apply it on the OU.
+	verify the wallpaper on member machine (GUI).
+=============================================================================================
+Task 3: Implement Static routing, OSPF, RIP & BGP using 3 routers
+=============================================================================================
+Task 4: Create a database for a local library, using the information given below:
+1. Book ID (unique identifier for each book)
+2. Title (the title of the book)
+3. Author (the author of the book)
+4. Genre (the genre/category of the book)
+5. Publication Year (the year the book was published)
+6. Quantity Available (the number of copies available in the library)
+& insert some entries here. 
+=============================================================================================
