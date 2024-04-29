@@ -1,0 +1,139 @@
+Storage topology:
+---------------------
+- its the arrangement or the config of storage devides within a network.
+- common topologies to store the data:
+	1. DAS (Direct-Attached storage) 
+	2. NAS (Network-Attached Storage)
+	3. SAN (Storage Area Network)
+
+- Direct-Attached storage (DAS)
+	- its connected directly to the computer or server.
+	- it uses USB, SATA, SCSI
+	- located near to the computer or server.
+	- it is dedicated to one server/computer.
+	- limited scalability
+	- used for high-performance applicaiton, data retrieval.
+	- low-cost solution for small-scale organizations.
+	- Example:
+		1. internal HDD.
+		2. external HDD.
+	
+- Network-Attached Storage (NAS)
+	- here, storage device is connected to multiple devices within the network.
+	- it is not directly connected to any server, but accessible on multiple devices.
+	- better scalability (than DAS)
+	- performance is based on hardware & band-width.
+	- for medium-level organizations
+	- used for file sharing, backup, centralized storage, etc...
+	
+- Storage Area Network (SAN)
+	- multiple devices are connected together to share the storage devices
+	- it uses Fibre channel or iSCSI.
+	- it is connected with array of disks. 
+	- offers high-performance
+	- manages the workload easily.
+	- use for critical applications, reliability, scalability.
+	- for enterprise-level organizations.
+	- it contains 2 components:
+		1. Server
+		2. Network Infrastructure
+		3. Storage
+	- SAN components:
+		- SAN Switches
+		- SAN fabric
+		- Physical disks
+		- RAID group
+		- connection:
+			- HBA (Host Bus Adapter)
+			- Controller.
+RAID:
+-------
+- Redundant Array of Independent disks.		or
+	[[- Redundant Array of Inexpensive disks.]]	
+- its a low-cost solution for storing the data.
+- RAID types:
+	- RAID 0 (Stripping)
+		- it stripes the data into multiple disks
+		- faster write, slower read access.
+		- if one drive/disk crashes, entire data is gone.
+	- RAID 1 (Mirroring)
+		- when data is stored in 1 disk, data is replicated immedietely to another disk.
+		- fault tolerance.
+		- 
+	- RAID 2 
+	- RAID 3
+	- RAID 4
+	- RAID 5 (striping with parity)
+	- RAID 6 (Double parity)
+	- RAID 10 (Mirroring + Stripping)
+	
+Storage Spaces:
+-----------------
+- in linux, we have LVM.
+- in windows, we have storage spaces.	
+
+
+
+Disk managements:
+	- run -> diskmgmt.msc
+	- win+x
+
+Types:
+	1. Basic disk
+		- are static disks
+		- these disks can not be expanded.
+	2. Dynamic disks
+		- these disks can be expanded.
+			- stripping
+			- mirroring
+			- storage spaces
+
+Backups:
+-----------
+- is the process of creating a copy of data for availability & easy to recover.
+- it is useful in case of:
+	- data loss
+	- corruption
+	- accidental deletion
+	- data protection
+	- disaster recovery
+	- business continuity
+- methods:
+	1. Manual backups
+	2. automated backups
+
+Enterprise-level backups
+	ex:
+	- Commvault
+	- Vertias Backup
+	- Veeam backup
+
+Small-Mid level:
+	- Acronis backup
+	- carbonite
+	
+Cloud backup:
+	- AWS S3
+	- Azure backup
+	- Google CLoud Backup
+	
+Open source:
+	- Bacula
+	- Amanda
+	- Duplicati
+	
+Backup architecture components:
+-------------------------------
+- source system
+- backup client
+- backup server
+- storage devices
+- backup media
+- backup policies
+- backup methods
+	- full backup
+	- incremental backup
+	- differential backup
+- monitoring tools
+- disaster recovery plan
+	
