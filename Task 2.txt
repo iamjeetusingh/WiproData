@@ -1,0 +1,25 @@
+Task 1: Attach 2 disks of 5GB each. create an LVM of approx 10GB and mount it on /myLVM with EXT4 file systems and verify. Add another HDD of 7GB and mount it to the same /myLVM partition by adding it the same volume group.
+
+Task 2: Create a shared NFS folder (c:\sharables) on domain controller machine with read-only permissions and access this folder on the member machine.
+
+Task 3: Implement OSPF using 4 routers
+
+Task 4: Attach 3 disks of 5GB each and create a storage space on Windows 10 machine and verify.
+
+Task 5: Create a RAID 0 and verify on windows machine.
+
+Task 6: Install the following RPM packages using the package manager of your choice using single command.
+	- VSFTPD
+	- PHP
+	- System-Config-Kickstart
+	- finger.
+
+Task 7: Change your linux server name using NMTUI command
+
+Task 8: Change the IP address on linux server & verify.
+	IP ADDRESS: 172.16.12.18/16
+
+Task 9: Start a dummy service and use linux command to kill this dummy process.
+
+Task 10: Create 10 users in specific OU in domain controller machine. Login and verify from any user randomly.
+	
