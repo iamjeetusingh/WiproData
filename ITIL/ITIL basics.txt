@@ -1,0 +1,185 @@
+ITIL V1:
+	- in 1989
+	- developed for providing best IT services.
+	- ITIL framework contains 5 core process:
+		1. Plan
+		2. Manage
+		3. Operate
+		4. Optimize
+		5. Review
+		
+ITIL V2:
+	- in 2001,
+	- this version was altered so that Microsoft Operation Framework foundation (MOF).
+	- new integrated mgmt tool 
+	- emphasis on flexible working assignments to help adapt to emerging market.
+	
+ITIL V3:
+	- the main goal was to create comprehensive framework that covers all major areas of ITSM.
+	- improved process mgmt, service delivery & change mgmt.
+	
+ITIL v4:
+	- 2019
+	- it contains major core processes:
+		- service design
+		- delivery
+		- change
+		- maintenance
+		- analytics.
+	- is considered to be the best version & it focuses on the practises like AGILE & DEVOPS.
+	
+Key concepts of ITIL:
+--------------------------------
+1. service lifecycle
+	- it consists of various stages like:
+		- service strategy
+		- service design
+		- service transition
+		- service operation
+		- continoual service improvement (CSI)
+2. processes
+	- defines the set of processes for IT including
+		- incident mgmt
+		- problem mgmt
+		- change mgmt
+		- service level mgmt
+3. functions
+	- ITIL describes functions within org that supports IT services like service desk, applicaiton mgmt.
+4. roles & responsiblities
+	- ITIL outlines various roles & responsiblities to ensure effective service delivery & support.
+	
+Core principle of ITSM:
+------------------------
+1. customer focus
+	- it focuses on the needs of the customer
+	- it helps in identifying customer requirements, defining service levels and continously improving the delivery to enhance customer satisfaction.
+2. service orientation
+	- it helps in designing, delivering & managing the services.
+3. process orientation
+	- helps in standardizing the activities, improving efficiency & ensuring consistency in service delivery.
+4. continous improvement
+	- it initiates the aim to optimise service quality, efficiency & business alignment with the needs.
+	- it also regularly assess IT services, processes & performance.
+	
+various frameworks for ITSM:
+-----------------------------
+	- ITIL
+	- TOGAF
+	- Business process framework (eTOM)
+	- COBIT (Control Objective for Information and Related Technologies)
+	- FitSM
+	- ASL
+	- USM
+	- BiSL
+	- MOF (Microsoft Operation Framework)
+	
+Key Components of ITSM:
+------------------------
+1. Service strategy
+	- this focuses on development strategies of IT services
+	- this includes the market demands & defining services portfolois.
+	
+2. Service Design
+	- it focuses on activities like service catalog mgmt, service level aggrement (SLA), capacity mgmt, availability mgmt.
+	
+3. Service Transition
+	- it manages the transition of new service or changed service into the production environment with mimimum distruption or risk.
+	- it includes change mgmt, release mgmt & deployment mgmt, knowledge mgmt.
+	
+4. Service Operation
+	- it ensures the ongoing delivery & support of IT servicesto meet SLA.
+	- it includes incident mgmt, problem mgmt, event mgmt, request fulfilment, access mgmt.
+	
+5. continoual service improvement (CSI)
+	- CSI focuses on identifying the opportunities, efficiency & effectiveness of IT services.
+	- it includes performance data, conducting service reviews, optimizing the service delivery processes.
+	
+Basic concept of ITIL4:
+-------------------------
+1. Service Value System (SVS)
+	- its the core or ITILv4
+	- it represents the overall model for creating value throughout the IT services.
+	- it includes
+		- SVC
+		- Guiding principle
+		- continoual improvements
+		- best practises
+2. Service Value Chain (SVC)
+	- its a flexible operating model for creation, delivery & supporting the IT services.
+	- it contains keys:
+		- Plan
+		- Improve
+		- Engage
+		- Design
+		- Transition
+		- deliver & support
+3. Guiding principle
+	- 7 guiding principles are used for guiding operations in making-decision & service mgmt.
+		1. focusing on values
+		2. where you are 
+		3. progressing iteratively with feedback
+		4. collaborating & promoting visibility
+		5. thinking & working holistically
+		6. keeping it simple & practical
+		7. optimizing & automating.
+4. 4th dimension of service mgmt:
+	- organization & people
+	- information & technolog
+	- partners & suppliers &
+	- value streams and processes.
+5. Service Value System (SVS) components:
+	- service value chain
+	- practices
+	- guiding principles
+	- governance
+	- continoual improvements
+6. ITIL practices	
+	- service desk
+	- incident mgmt
+	- change control
+	- service level mgmt
+7. continoual improvements
+	- regular assessments & improvments of service mgmt.
+	- it help organization to adapt changes according to the market needs.
+	
+RACI:- is widely used techique for clarifying & defining the roles & responsiblities within a project.
+-------
+	R = Responsible
+	A = Accountable
+	C = Consulted
+	I = Informed
+
+Responsible
+	- this role refers to the person or group who is "responsible for performing" the task.
+	- they are the one who are directly involved in executing the work.
+	- we can have any number of responsible people in the team.
+	
+Accountable
+	- this role refers to the person who ultimately owns the task.
+	- this person is an individual person & ensures that the task is done correctly & on time.
+	- every task/activity needs at least 1 accountable person.
+	
+Consulted
+	- this role refers to individual person or group who provides inputs or expertise to the task.
+	- but these people are not directly responsible for its execution.
+	- they may offer advice, feedback or information to support the completion of the tasks.
+	
+Informed
+	- this role refers to individual or groups who needs to be kept informed about the progress or outcome of the task.
+	- they are not directly involved in the execution
+	- but these people/group must be informed.
+	
+RACI alternatives:
+---------------------------
+DACI:
+	D = driver		= responsible individual in-charge of making sure a decision is made.
+	A = Approver	= People who make final decisions.
+	C = Contributor	= Experts that drivers asks for help.
+	I = Informed	= people informed of the final decision.
+	
+RASCI:
+	R = Responsible	= who needs to make sure the project reaches completion.
+	A = Accountable = who has ultimate control over the project.
+	S = Support		= who will provide help to the responsible members.
+	C = Consulted	= who will give advice to the responsible members.
+	I = Informed	= who needs to be kept in the loop at every stage.
