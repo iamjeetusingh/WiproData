@@ -87,7 +87,7 @@ Key Components of ITSM:
 	- it includes change mgmt, release mgmt & deployment mgmt, knowledge mgmt.
 	
 4. Service Operation
-	- it ensures the ongoing delivery & support of IT servicesto meet SLA.
+	- it ensures the ongoing delivery & support of IT services to meet SLA.
 	- it includes incident mgmt, problem mgmt, event mgmt, request fulfilment, access mgmt.
 	
 5. continoual service improvement (CSI)
@@ -183,3 +183,230 @@ RASCI:
 	S = Support		= who will provide help to the responsible members.
 	C = Consulted	= who will give advice to the responsible members.
 	I = Informed	= who needs to be kept in the loop at every stage.
+	
+	
+	
+Service Level Management (SLM) - Pizza Delivery:
+-------------------------------------------------
+1. Defining the service level agreement (SLA)
+	delivery time	: 30mins
+	pizza quality	: host, fresh
+	customer service: polite, helpful
+	
+2. Monitoring service performance
+	delivery time		: track the time for preparing, cooking & delivering the food.
+	customer feedback	: take feedback from customer, to assess the satisfaction level & identity the areas for improvements.
+	quality inspection	: regular check
+	
+3. Responding to service issues
+	late delivery		: discounts & coupons
+	quality issues		: replacement or refund.
+	customer complaints	: address & resolve the problems.
+	
+4. Continoual improvements
+	process optimization	: bootleneck situation.
+	training & development	: training for the staff members to improve skills.
+	technology upgrade		: precise GPS technology.
+
+5. Reporting & Review
+	performance reports		: delivery time, customer feedback, quality of service.
+	
+Key aspects of Change Management in ITIL:
+-------------------------------------------
+1. Change control process
+	- change mgmt involves establishing a formal process for
+		requesting
+		evaluating
+		approving
+		implementing & 
+		reviewing changes
+
+2. Change Type:
+	- standard change
+		- pre-authorized & routine change
+	- normal change
+		- moderate risj & complexity
+	- emergency change
+		- urgent & high-priority changes
+		
+3. Change Advisory Board (CAB)
+	- key component of change mgmt
+	- its responsibility is to assessing & evaluating proposed changes, making recommendations for approval/rejection.
+	
+4. Change Models and Templates
+	- it helps in ensuring consistency and efficiency in handling changes.
+	
+5. Risk assessment & Impact Analysis
+	- it helps in identifying potential issues and plan appropiate mitigation strategies
+	
+6. Change authorization & approval
+	- changes are authorization & approved based on criteria like risk level, business impact, compliance requirements
+	- authorization & approval are obtained from CAB, stackholders, senior mgmt.
+	
+7. Change implementation & review:
+	- approved changes are implemented according to pre-defined procedures
+	
+8. Post-implementation Review (PIR)
+	- after the changes are implemented.
+	- this helps in enhancing the process & optimizing future changes.
+	
+Change Management Flow/Process:
+--------------------------------
+1. Request for change (RFC)
+	- the begining of the change mgmt process
+	- its a formal request to implement the changes.
+	- it can be originated by
+		- users
+		- customer
+		- IT staff
+		- automated monitoring system
+
+2. Initial assessment
+	- then change mgmt tean will conduct initial assessment to gather information abt the proposed changes.
+		
+3. Change evaluation:
+	- this assessment includes evaluating the nature of changes, its impact, urgency, risk level & dependencies.
+	
+4. Change Approval:
+	- CAB or stackholders reviews & then make decision for approval/rejection
+	
+5. Change planning:
+	- once changes are approved, the change mgmt team plans for activities, resources, and timeline.
+	
+6. Change Implementation:
+	- only the approved changes are to be implemented here. 
+	- this includes coordinating with stackholders, conducting tests and following approved procedures.
+	
+7. Change Review and closure:
+	- after the changes are implemented, change mgmt team conducts the post-implementation review (PIR) to assess the effectiveness of the changes, identifying lession learned and then documenting it.
+	- once everything is successfull, then change id closed. 
+	
+8. change communication & documentation:
+	- informing the stackholders & others that the problem is resolved.
+	
+Service Management :
+---------------------
+	- It refers to the set of practices, processes and capabilities used to design, deliver, manage and improve IT services to meet the needs of customers and support business objectives effectively. 
+	- It encompasses the entire lifecycle of IT services from initial planning and design to ongoing operations, support and optimization. 
+
+Key aspects of Service management includes:
+	Service strategy
+	Service design
+	Service transition
+	Service Operation
+	Continual Service Improvements (CSI)
+
+Service Management – Service Strategy:
+--------------------------------------
+1. Defining service offerings
+	- identifying & defining the type of service that will be offered to customer.
+	- this includes determining which service will be provided internally, which will be outsourced & which will be delivered through partnership.
+	- ex:
+		- a bank offering online banking, mortgage service, investment advisory & customer support.
+		
+2. Assessing Market Demands
+	- organizations need to understand the market demands & customer needs for developing improved services
+	- we require: 
+		- market research
+		- analysing customer feedback
+		- identifying emergency trends
+		
+3. Establishing Service Portfolios
+	- this involves strategic importance, values & lifecycle stages.
+	
+4. Defining Service Level Agreements (SLAs)
+	- defines service quality metrix, reponse times and availability of targets
+
+5. Identifying strategic assets
+	- organizations identify the strategic assets, resources & capabilities that are needed for delivering the IT services.
+	- this includes assessing internal strengths & weaknesses
+	
+6. Financial Management for IT Services
+	- this includes budgeting, cost optimization & financial analysis
+	
+	
+Service Management – Service Design:
+--------------------------------------
+1. Service Catalog Management
+	- it involves creating & maintaining a service catalog that provides a breif list of available IT services.
+
+2. Service Level Management
+	- it ensures that the service levels are clearly defines & agreed upon.
+
+3. Capacity Management
+	- it includes analysing usage patterns, forcasting demands & optimizing resource allocation.
+
+4. Availability Management
+	- it includes identifying potential sources of downtime, implementing measures to minimize distruption & designing resilient IT architecture.
+	
+5. IT Service Continuity Management
+	- it includes developing IT service continuity plans, performing risk assessment & implementing disaster recovery measures.
+
+6. Information Security Management
+	- it includes implementing the security controls, conducting risk assessments & complying with regulatory requirements.
+	
+Service Management – Service transition:
+-----------------------------------------
+1. Change management
+	- this includes evaluating proposed changes, assessing impact, obtaining approval & coordinating implementation activities.
+	
+2. Release & deployment mgmt:
+	- this includes defining release packages, coordinating deployment activities & verifying that the changes are successfull.
+	
+3. Service Validation and Testing
+	- functional testing, performance testing & User Acceptance Test (UAT)
+	
+4. Knowledge Management
+	- this ensure that the stackholders have access to accurate & up to date information to to support the transition
+	
+5. Configuration Management
+	- it includes maintaining configuration records, tracking changes & ensuring that the configuration baseline is updated as changes are implemented.
+	
+6. Transition Planning and Support
+	- this includes developing transition plans, defining roles & responsibilities & providing training & support to stackholders.
+	
+Service Management – Service Operation:
+----------------------------------------
+1. Incident Management
+	- it includes managing incidents, unplanned interruptions, reduction in QoS.
+	- incident mgmt is used for restoring services normally & quickly.
+
+2. Request Fulfillment
+	- it includes fulfilling of requests, all formals requests from user or customer.
+
+3. Problem Management
+	- it includes identifying & resolving the issues.
+	- analysing of data, identifying the trends & implement correct actions.
+
+4. Access Management
+	- this involves defining the access policies, granting permissions & monitoring user activities.
+
+5. Event Management
+	- it includes event data, coorelated events, finding meaningfull patterns & initiating appropiate actions.
+
+6. Continuous Monitoring and Reporting
+	- it helps in improving the values of IT services to the business.
+	
+Service Management – Continual Service Improvements (CSI):
+------------------------------------------------------------
+1. Define CSI Approach
+	- establishing goals, objects & KPI (Key performance indicator) to measure progess & success.
+	
+2. Identify Opportunities for Improvement
+	- this includes identifying opportunities for improvements through various means such as analysing service performance data, conducting customer surveys & taking feedback from stackholders.
+
+3. Assess Current State
+	- this includes assessing the current state of IT services, process & capabilities to identity strengths & weaknesses
+
+4. Define Improvement Initiatives
+	- this includes developing actions, assiging responsibilities & setting timelines for implementation.
+
+5. Implement Improvements
+	- this includes coordinating cross-functional teams, communicating changes to stackholders & providing training as needed.
+
+6. Measure and Monitor Progress
+	- this includes tracking performance metrix, analysing trends & conducting regular review to assess the effectiveness of improvement initiatives.
+
+
+7. Review and Learn
+	- this includes capturing knowledge, sharing best practices & continoual refining improvments.
