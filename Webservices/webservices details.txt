@@ -1,0 +1,165 @@
+open standard protocols:
+------------------------
+1. HTTP
+	- it defines how messages are formatted and transmitted & how web servers & browsers should respond to various commands.
+
+2. SOAP
+	- Simple Object Access Protocol
+	- it is used for exchanging the structured information.
+	- it typically uses XML format.
+	
+3. REST
+	- REpresentational State Transfer
+	- RESTful systems typically communicate over HTTP using Get, Post, Put, Delete in JSON or XML.
+	
+4. XML
+	- eXtensible Markup Language.
+	- sharing the structured data.
+	
+5. JSON
+	- JavaScript Object Notation
+	- its the new & better way to transmit/share the structured data.
+	- its light-weighted.
+	
+6. WSDL
+	- Web Services Description Language
+	- WDSL document defines the operations supported by the service, message formats & protocols used for communication.
+	
+7. Swagger / OpenAPI
+	- it provides a machine-readable description of the API's endpoints, parameters, requests/response formats & authentication methods
+	
+8. GraphQL
+	- its a query language for APIs & a runtime for executing those queries by using a type system you define for your data.
+	
+Uses of web services:
+---------------------
+1. integration
+	- allow different systems to exchange data seemlessly, even when they are built on different languages
+	
+2. Interoperability
+	- enabling the apps to communicate accross different platforms & languages
+	
+3. Reuse
+	- reuse the existing functionalities
+	
+4. scalability
+	- scaling is easy within the distributed computing environment
+	
+Types of webservices:
+----------------------
+1. SOAP Web Services
+	- SOAP = Simple Object Access Protocol
+	- its a protocol for exchanging the structured information in the implementation of webservices.
+	- it uses XML formatting 
+	- it can transport data using HTTP, SMTP, etc...
+	- SOAP typically relies on WSDL ( web services description language) to define the operations, message formats & protocols.
+	
+2. RESTful Web Services
+	- uses HTTP methods (get, put, post, delete) to perform CRUD (Create, Read, Update, Delete) operation.
+	- simple light-weighted protocol uses JSON or XML.
+	- RESTful services are know for their scalability & flexibility.
+	
+3. JSON-RPC and XML-RPC
+	- RPC = Remote Procedure Call
+	- these are light-weighted protocols using JSON or XML
+	- JSON-RPC & XML-RPC allows client to invoke the methods on servers & receive the results.
+	- these are the alternatives to SOAP 
+	
+4. GraphQL
+	- its a query language
+	- it provides single endpoint for querying and modifying the data.
+	- known for flexibility, efficiency & ability to empower the client to request only data that is required.
+	
+5. WebSocket service:
+	- its a communication protocol.
+	- it allows services with real-time, bi-directional communication between client & server.
+	- these are used in low-latency, high-performance communications like chat apps, online gaming & trading platforms.
+	
+Key characteristics of SOAP:
+--------------------------------
+1. Protocol:
+	- it defines the set of rules for message structure, for specifying the format and handling of the message exchange between server & client.
+	
+2. XML-based:
+	- SOAP msgs are encoded using XML.
+	- due to this platform & language can communicate seemlessly.
+	
+3. Transport Agnostic
+	- SOAP msgs can be transported using various protocols like HTTP, SMTP, JMS (Java message service)
+	
+4. WSDL
+	- SOAP uses WSDL to describe the functionalities, support & message formats.
+	
+5. Strong Typing
+	- SOAP support stront typing, meaning it supports strict data typing & validation.
+	
+6. Error Handling
+	- SOAP has built-in support for error handling.
+	- it supports robust error reporting & recovery.
+	
+7. Complexity
+	- its complex than REST APIs
+	- as it supports 
+		- strong typing
+		- XML parsing.
+		
+Key characteristics of REST are:
+---------------------------------
+Architecture Style
+	- REST is an architectural style rather than a protocol.
+	- it emphasizes on uniform interface, resource-based interactions.
+
+HTTP-Based
+	- REST uses HTTP (get, post, put,delete) to perform CRUD operations
+
+Resource-Oriented
+	- REST treats data as resources that can be uniquely indentified by URIs (Uniform Resource Indentifier).
+
+Representations
+	- RESTful services exchange representation of resources in light-weighted formats like JSON or XML.
+
+Statelessness
+	- RESTful services are stateless, meaning that each request from a client contains all the information necessary to process the request. 
+
+Hypermedia
+	- RESTful services may use hypermedia controls to link nagivation between resources.
+
+Simplicity
+	- it is simple & more flexible than SOAP.
+	- it does not support loose typing & JSON.
+
+########################################################################################################
+API document URL: https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md
+API website for testing: https://reqbin.com/
+Method
+--------------------------------------------------
+client	
+	GET
+
+	https://simple-books-api.glitch.me/
+	https://simple-books-api.glitch.me/books
+	https://simple-books-api.glitch.me/books/2
+
+Server
+	JSON (as return)
+--------------------------------------------------
+########################################################################################################
+
+Types of APIs:
+------------------------
+Web APIs:
+	- these are accessible over internet using protocols like HTTP.
+	- they enable interactions between web-based applications.
+	
+Library APIs
+	- they are provide by library or framework of a programming language.
+
+Operating System APIs
+	- these are provided by the operating system.
+	- this will allow the applications to access the system resources. 
+	
+Hardware APIs
+	- these are provided by the hardware devices like sensors, camera, etc...
+	- these APIs enable the software applications to interact with and control hardware components.
+	
+	
